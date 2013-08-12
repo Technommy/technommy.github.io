@@ -1,0 +1,47 @@
+{
+	"activities": [
+		{
+			"event": "the First Adolescent Developer Conferece in China",
+			"title": "Founder",
+			"description": "<text>",
+			"timespan": "Nov 17 ~ 18 2012",
+			"place": "Shenzhen, P.R.China",
+			"links": [
+				{
+					"title": "<title>",
+					"url": "<url>"
+				}
+			]
+		},
+		{
+			"event": "the Second Adolescent Developer Conference in China",
+			"title": "Co-curator",
+			"description": "<text>",
+			"timespan": "Jul 27th 2011",
+			"place": "Beijing, P.R.China",
+			"links": [
+				{
+					"title": "<title>",
+					"url": "<url>"
+				}
+			]
+		},
+	],
+	"languages": [
+		{
+			"name": "Chinese Mandarin",
+			"level": "Native"
+		},
+		{
+			"name": "Russian",
+			"level": "Limited Working Proficiency"
+		},
+		{
+			"name": "English",
+			"level": "Fluent"
+		}
+	],
+	"meta": {
+		"last_updated": "Aug 13, 2013"
+	}
+}

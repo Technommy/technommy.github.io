@@ -1,10 +1,12 @@
 ---
 layout: page
-title: About
+title: About Me
 ---
 
-Give people something to read and get to know you. Here's my attempt: this is [Mu-An](http://muan.co), a designer developer who lives in London at the moment.
+![ADConf 2013]({{ site.url }}/assets/me_at_adconf_2013.png)
 
-Tweet at [@muanchiou](http://twitter.com/muanchiou), read my code on [GitHub](http://github.com/muan), see my designs on [Dribbble](http://dribbble.com/muan), find my CV on [LinkedIn](http://uk.linkedin.com/in/muanchiou).
+Hi there, I'm Tommy, global_id as technommy, born Aug 26 <a href="http://en.wikipedia.org/wiki/1995" target="_blank">1995</a> in <a href="http://en.wikipedia.org/wiki/Hunan" target="_blank">Hunan</a>, P.R.China.
 
-This theme is made by me. You have a nice day. ♥
+I'm now in <a href="http://en.wikipedia.org/wiki/Gap_year" target="_blank">gap-year</a> situation. Currently <a href="http://sphinx.oupeng.com" target="_blank">working</a> for <a href="http://en.wikipedia.org/wiki/Opera_Software" target="_blank">Opera Software ASA</a> China (technically <a href="http://dev.oupeng.com/" target="_blank">Oupeng</a>) as an <a href="https://en.wikipedia.org/wiki/Internship" target="_blank">intern</a>.
+
+> Much appreciated to [/muan](https://github.com/muan) for created such fabulous theme on Jekyll.

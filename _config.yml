@@ -1,22 +1,24 @@
-title:            Scribble
-description:      A jekyll theme. Because I scribble.
+title:            Tommy
+description:      A jekyll theme by /Mman.
 url:              # Site url.
 signoff:          # Your name.
-disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+disqus_shortname: technologier # disqus comment thread for post header options. ( leave blank if unwanted. )
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
 google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
 
 links:
   - name:         About
     url:          /about
-  - name:         Blog
-    url:          http://muan.co
-    external:     true
+  - name:         Resume
+    url:          /resume
   - name:         Email
-    url:          mailto:hello@muan.co
+    url:          mailto:technologier@gmail.com
     external:     true
   - name:         GitHub
-    url:          http://github.com/muan
+    url:          http://github.com/technommy
+    external:     true
+  - name:         Instagram
+    url:          http://instagram.com/technommy
     external:     true
 pygments:         true
 permalink:        pretty
