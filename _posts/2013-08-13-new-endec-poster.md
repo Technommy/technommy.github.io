@@ -10,4 +10,4 @@ My new poster design for school (Shenzhen Meilin Middle School) community
 
 ![ADConf 2013]({{ site.url }}/assets/poster_for_endec_school_community.png)
 
-View more my visual works on my <a href="http://jliu11.weeblyl.com" target="_blank">Weebly</a> website :-)
+View more of my visual works on my <a href="http://jliu11.weeblyl.com" target="_blank">Weebly</a> website :-)
