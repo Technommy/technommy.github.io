@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sphinx 開發者簡明使用指南
+title: Sphinx 簡明使用指南
 date: 2013-08-13 11:30:00
 ---
 
