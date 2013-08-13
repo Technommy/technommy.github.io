@@ -13,7 +13,7 @@ date: 2013-08-13 11:30:00
 
 <b style="background-color: #d40000; color: #ffffff; padding-left: 5px; padding-right: 5px; font-size: 22px;">STEP 1</b>&nbsp;<b style="padding-left: 2px; color: #d40000; font-size: 20px;">了解 Sphinx 的应用模式</b>
 
-<p>本质上，Sphinx 是一个经过了革命性优化的浏览器内核。它的基本应用模式是：与 HTML5/JavaScript 程序打包为.apk 可执行文件。开发者可以在 Sphinx 的 <a href="http://sphinx.oupeng.com/demo" target="_blank">DEMO</a> 页面 下载到基于 Sphinx 打包的一些 Demo，同时也可以对比同样的 Demo 基于传统手机浏览器运行的效果。
+<p>本质上，Sphinx 是一个经过了革命性优化的浏览器内核。它的基本应用模式是：与 HTML5/JavaScript 程序打包为.apk 可执行文件。开发者可以在 Sphinx 的 <a href="http://sphinx.oupeng.com/demo" target="_blank">DEMO</a> 页面 下载到基于 Sphinx 打包的一些 Demo，同时也可以对比同样的 Demo 基于传统手机浏览器运行的效果。</p>
 
 <b style="background-color: #d40000; color: #ffffff; padding-left: 5px; padding-right: 5px; font-size: 22px;">STEP 2</b>&nbsp;<b style="padding-left: 2px; color: #d40000; font-size: 20px;">基于 Sphinx 开发程序</b>
 
