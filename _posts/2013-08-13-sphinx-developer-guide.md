@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sphinx 簡明使用指南
+title: Sphinx 開發者簡明使用指南
 date: 2013-08-13 11:30:00
 ---
 
@@ -64,7 +64,7 @@ date: 2013-08-13 11:30:00
 
 <p>游戏程序会在每一帧进行数十个或数百个对象的描绘，且可能针对部分对象进行缩放，移动，旋转等操作。在此过程中，某些 Canvas API 可能是没有意义的。例如，如果某个对象并不需要进行缩放、位移、旋转变化，即变换参数是 (1, 0, 0, 1, 0, 0)，那么，调用 transform 就没有意义；如果前后 2 个对象的变换参数完全相同，那么针对后一个对象进行　restore、save、transform　等操作就是多余的。</p>
 
-<p><b style="background-color: #16a085; color: #16a085; padding-right: 2px;">0</b>&nbsp;<b style="color: #16a085; padding-right: 2px;">1</b><b style="background-color: #16a085; color: #ffffff; padding-left: 4px; padding-right: 4px;">JavaScript 层面的性能优化</b></p>
+<p><b style="background-color: #16a085; color: #16a085; padding-right: 2px;">0</b>&nbsp;<b style="color: #16a085; padding-right: 2px;">2</b><b style="background-color: #16a085; color: #ffffff; padding-left: 4px; padding-right: 4px;">JavaScript 层面的性能优化</b></p>
 
 <p>JavaScript 是弱类型语言，它提供了非常灵活的数据定义方式，这种灵活是以 JavaScript 引擎的负担为代价的，这些负担可能表现为：</p>
 
