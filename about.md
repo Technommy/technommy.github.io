@@ -9,6 +9,6 @@ Hi there, I'm Tommy, global_id as technommy, born Aug 26 <a href="http://en.wiki
 
 Here's a slide introduction on Slid.es.
 
-<iframe src="http://slid.es/technommy/sphinx-intro/embed" width="430" height="467" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="http://slid.es/technommy/sphinx-intro/embed" width="467" height="430" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 > Much appreciated to [/muan](https://github.com/muan) for created such fabulous theme on Jekyll.
