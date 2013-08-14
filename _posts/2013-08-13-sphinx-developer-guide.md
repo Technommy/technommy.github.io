@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sphinx 簡明使用指南
+title: Sphinx 開發者簡明使用指南
 date: 2013-08-13 11:30:00
 ---
 
@@ -13,11 +13,11 @@ date: 2013-08-13 11:30:00
 
 <p>开发者可以参考实际完成一款游戏基于 Sphinx 运行、调试、打包的过程。</p>
 
-<b style="background-color: #d40000; color: #ffffff; padding-left: 5px; padding-right: 5px; font-size: 22px;">STEP 1</b>&nbsp;<b style="padding-left: 2px; color: #d40000; font-size: 20px;">了解 Sphinx 的应用模式</b>
+<p style="background-color: #d40000; color: #ffffff; font-size: 20px;"><b style="background-color: #ffffff; color: #d40000; padding-left: 5px; padding-right: 5px; font-size: 16px;">STEP 1</b>&nbsp;<b>了解 Sphinx 的应用模式</b></p>
 
 <p>本质上，Sphinx 是一个经过了革命性优化的浏览器内核。它的基本应用模式是：与 HTML5/JavaScript 程序打包为.apk 可执行文件。开发者可以在 Sphinx 的 <a href="http://sphinx.oupeng.com/demo" target="_blank">DEMO</a> 页面 下载到基于 Sphinx 打包的一些 Demo，同时也可以对比同样的 Demo 基于传统手机浏览器运行的效果。</p>
 
-<b style="background-color: #d40000; color: #ffffff; padding-left: 5px; padding-right: 5px; font-size: 22px;">STEP 2</b>&nbsp;<b style="padding-left: 2px; color: #d40000; font-size: 20px;">基于 Sphinx 开发程序</b>
+<p style="background-color: #d40000; color: #ffffff; font-size: 20px;"><b style="background-color: #ffffff; color: #d40000; padding-left: 5px; padding-right: 5px; font-size: 16px;">STEP 2</b>&nbsp;<b>基于 Sphinx 开发程序</b></p>
 
 <p>Sphinx 对开发工具，开发模式没有特殊限定；标准的 HTML5 应用都可以基于 Sphinx 运行。不过，不同浏览器内核对部分 HTML5 规范的实现细节各有不同。Sphinx 的规范遵从度细节请参考如下链接：</p>
 
@@ -26,7 +26,7 @@ date: 2013-08-13 11:30:00
 
 <p>开发者也可以在一些中文网站如 <a href="http://www.w3school.com.cn/" target="_blank">W3School</a> 查询到具体规范细节在不同浏览器的遵从度，Sphinx 的规范遵从度等同于 Opera。</p>
 
-<b style="background-color: #d40000; color: #ffffff; padding-left: 5px; padding-right: 5px; font-size: 22px;">STEP 3</b>&nbsp;<b style="padding-left: 2px; color: #d40000; font-size: 20px;">基于 Sphinx 调试和调优</b>
+<p style="background-color: #d40000; color: #ffffff; font-size: 20px;"><b style="background-color: #ffffff; color: #d40000; padding-left: 5px; padding-right: 5px; font-size: 16px;">STEP 3</b>&nbsp;<b>基于 Sphinx 调试和调优</b></p>
 
 <p>Sphinx 提供如下调试工具：</p>
 
@@ -82,7 +82,7 @@ date: 2013-08-13 11:30:00
 
 <p>例如：不要采用超长方法（例如，超过 800～1000 行的方法），尽量少用 eval。</p></p>
 
-<b style="background-color: #d40000; color: #ffffff; padding-left: 5px; padding-right: 5px; font-size: 22px;">STEP 4</b>&nbsp;<b style="padding-left: 2px; color: #d40000; font-size: 20px;">技术社区</b>
+<p style="background-color: #d40000; color: #ffffff; font-size: 20px;"><b style="background-color: #ffffff; color: #d40000; padding-left: 5px; padding-right: 5px; font-size: 16px;">STEP 4</b>&nbsp;<b>技术社区</b></p>
 
 <p>Sphinx 面向开发者提供如下技术交流的平台，开发者可以提问，交流，发表，吐槽 Sphinx 应用方法和体验，以及在 HTML5、Canvas API、JavaScript 等领域的应用经验</p>
 
@@ -92,7 +92,7 @@ date: 2013-08-13 11:30:00
 
 <p><b style="background-color: #2c3e50; color: #2c3e50;">0</b>&nbsp;<a href="http://www.opera.com/docs/specs/presto2.12/#m212-359" target="_blank">Sphinx 联系邮箱</a></p>
 
-<b style="background-color: #d40000; color: #ffffff; padding-left: 5px; padding-right: 5px; font-size: 22px;">STEP 5</b>&nbsp;<b style="padding-left: 2px; color: #d40000; font-size: 20px;">开发者平台</b>
+<p style="background-color: #d40000; color: #ffffff; font-size: 20px;"><b style="background-color: #ffffff; color: #d40000; padding-left: 5px; padding-right: 5px; font-size: 16px;">STEP 5</b>&nbsp;<b>开发者平台</b></p>
 
 <p>开发者可以在 Sphinx 开发者平台获得如下服务：</p>
 
