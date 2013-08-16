@@ -2,11 +2,17 @@
 	"activities": [
 		{
 			"event": "the First Adolescent Developer Conferece in China",
-			"title": "Founder",
+			"title": "founder",
 			"description": "<text>",
-			"time": "Nov 17 ~ 18 2012",
+			"timespan": "Nov 17 ~ 18 2012",
 			"place": "Shenzhen, P.R.China",
-			"links": [
+			"media-report": [
+				{
+					"shenzhen-newpaper": "http://wb.sznews.com/html/2012-11/06/content_2264722.htm",
+					"tencent-technology-section": "http://tech.qq.com/a/20121121/000147.htm"
+				}
+			]
+			"external-links": [
 				{
 					"title": "<title>",
 					"url": "<url>"
@@ -15,14 +21,45 @@
 		},
 		{
 			"event": "the Second Adolescent Developer Conference in China",
-			"title": "Co-curator",
+			"title": "co-curator",
 			"description": "<text>",
-			"time": "Jul 27th 2011",
+			"timespan": "Jul 27th 2013",
 			"place": "Beijing, P.R.China",
-			"links": [
+			"media-report": [
+				{
+					"guokr": "http://www.guokr.com/event/271"
+				}
+			]
+			"external links": [
 				{
 					"title": "<title>",
 					"url": "<url>"
+				}
+			]
+		},
+		{
+			"event": "HTML5 Chinese Interest Group at W3C",
+			"title": "translator",
+			"description": "<text>",
+			"timespan": "Sep 2012 ~ present",
+			"place": "Beijing, P.R.China",
+			"external links": [
+				{
+					"title": "personal profile",
+					"url": "http://www.w3.org/html/ig/zh/wiki/User:Jliu11"
+				}
+			]
+		},
+		{
+			"event": "oCourse translation group for open course",
+			"title": "leader of course production and translator",
+			"description": "<text>",
+			"timespan": "Oct 2011 ~ present",
+			"place": "shenzhen, P.R.China",
+			"external links": [
+				{
+					"title": "official site",
+					"url": "http://ocourse.org"
 				}
 			]
 		},
@@ -41,7 +78,4 @@
 			"level": "Fluent"
 		}
 	],
-	"meta": {
-		"last_updated": "Aug 13, 2013"
-	}
 }
