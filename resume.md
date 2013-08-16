@@ -3,7 +3,7 @@ layout: page
 title: Mini Résumé
 ---
 
-Resume created using JSON, download the full version by clicking <a href="/assets/resume_20130813_updated.json" target="_blank">me</a>.
+Resume created using JSON, download the full version by clicking <a href="/assets/resume_20130816_updated.json" target="_blank">me</a>.
 
 {% highlight json %}
 {
