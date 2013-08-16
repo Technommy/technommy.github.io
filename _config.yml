@@ -11,14 +11,10 @@ links:
     url:          /about
   - name:         Resume
     url:          /resume
-  - name:         Email
-    url:          mailto:technologier@gmail.com
-    external:     true
+  - name:         Visual Works
+    url:          /visual-works
   - name:         GitHub
     url:          http://github.com/technommy
-    external:     true
-  - name:         Instagram
-    url:          http://instagram.com/technommy
     external:     true
 pygments:         true
 permalink:        pretty
