@@ -5,7 +5,7 @@ title: Visual Works
 
 {% highlight json %}
 {
-	"protfolio": [
+	"portfolio": [
 		{
 			"graphic design": "UI / UX",
 			"fine arts": "skecthing / photography",
