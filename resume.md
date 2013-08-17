@@ -13,7 +13,7 @@ Resume created using JSON, download the full version by clicking <a href="/asset
 			"en_name": "Tommy",
 			"gender": "male",
 			"identification": "student, hacker",
-			"programming": "HTML > CSS > PHP > JavaScript > Python > C++ > OCaml",
+			"programming": "HTML > CSS > PHP > JavaScript > Python > OCaml > C++",
 			"language": "zh_CN, en, ru"
 		}
 	]
