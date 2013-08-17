@@ -3,7 +3,7 @@ layout: page
 title: Visual Works
 ---
 
-<p style="background-color: #2980b9; color: #ffffff; text-align: center; font-size: 20px; padding-top: 3px; padding-bottom: 3px;">GRAPHIC DESIGN & PHOTOGRAPHY</p>
+<p style="background-color: #2980b9; color: #ffffff; text-align: center; font-size: 18px; padding-top: 3px; padding-bottom: 3px;">GRAPHIC DESIGN & PHOTOGRAPHY</p>
 
 <a href="http://jliu11.weebly.com/visual-works.html" target="_blank" class="big-button grey">> MORE <</a>
 
