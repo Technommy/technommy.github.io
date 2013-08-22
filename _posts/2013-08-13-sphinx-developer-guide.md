@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sphinx 簡明使用指南
+title: Sphinx 開發者簡明使用指南
 date: 2013-08-13 11:30:00
 ---
 
@@ -9,7 +9,7 @@ date: 2013-08-13 11:30:00
 <p>提到「引擎」，大家往往会想到复杂的开发框架，厚重的参考手册，不过，基于 Sphinx，HTML5 开发者并不需要有这些担心，因为 Sphinx 是一款提供标准 HTML5 接口的内核引擎。花半小时阅读一遍本文，HTML5 开发者完全可以掌握 Sphinx 的使用方法。</p>
 <p>同时，我们提供了一个简单的案例</p>
 
-<p><b style="background-color: #2c3e50; color: #2c3e50;">0</b>&nbsp;<a href="http://sphinx.oupeng.com/sphinxsample" target="_blank">基于 Sphinx，实现高性能 HTML5 手机游戏</a></p>
+<p><b style="background-color: #798796; padding-right: 3px;">&nbsp;</b>&nbsp;<a href="http://sphinx.oupeng.com/sphinxsample" target="_blank">基于 Sphinx 实现高性能 HTML5 手机游戏</a></p>
 
 <p>开发者可以参考实际完成一款游戏基于 Sphinx 运行、调试、打包的过程。</p>
 
@@ -21,8 +21,8 @@ date: 2013-08-13 11:30:00
 
 <p>Sphinx 对开发工具，开发模式没有特殊限定；标准的 HTML5 应用都可以基于 Sphinx 运行。不过，不同浏览器内核对部分 HTML5 规范的实现细节各有不同。Sphinx 的规范遵从度细节请参考如下链接：</p>
 
-<p><b style="background-color: #2c3e50; color: #2c3e50;">0</b>&nbsp;<a href="http://www.opera.com/docs/specs/presto2.12/#m212-359" target="_blank">Web specifications support in Opera Presto 2.12</a></p>
-<p><b style="background-color: #2c3e50; color: #2c3e50;">0</b>&nbsp;<a href="http://sphinx.oupeng.com/feature-support" target="_blank">Sphinx 支持的 Web 标准</a></p>
+<p><b style="background-color: #798796; padding-right: 3px;">&nbsp;</b>&nbsp;<a href="http://sphinx.oupeng.com/sphinxsample" target="_blank">Web specifications support in Opera Presto 2.12</a></p>
+<p><b style="background-color: #798796; padding-right: 3px;">&nbsp;</b>&nbsp;<a href="http://sphinx.oupeng.com/sphinxsample" target="_blank">Sphinx 支持的 Web 标准</a></p>
 
 <p>开发者也可以在一些中文网站如 <a href="http://www.w3school.com.cn/" target="_blank">W3School</a> 查询到具体规范细节在不同浏览器的遵从度，Sphinx 的规范遵从度等同于 Opera。</p>
 
@@ -30,9 +30,9 @@ date: 2013-08-13 11:30:00
 
 <p>Sphinx 提供如下调试工具：</p>
 
-<p><b style="background-color: #16a085; color: #16a085; padding-right: 2px;">0</b>&nbsp;<b style="color: #16a085; padding-right: 2px;">1</b><b style="background-color: #16a085; color: #ffffff; padding-left: 4px; padding-right: 4px;">Sphinx 模拟器</b></p>
+<p><b style="background-color: #16a085; color: #ffffff; padding-right: 4px; padding-left: 4px; border-radius: 5px;">1</b><b style="color: #16a085; padding-left: 4px; padding-right: 4px;">Sphinx 模拟器</b></p>
 
-<p><b style="background-color: #16a085; color: #16a085; padding-right: 2px;">0</b>&nbsp;<b style="color: #16a085; padding-right: 2px;">2</b><b style="background-color: #16a085; color: #ffffff; padding-left: 4px; padding-right: 4px;">Opera 12 浏览器</b>&nbsp;&nbsp;<b style="color: #16a085;">: 开发者须在 Sphinx 首页找到 “Opera 12 下载”，根据 PC 操作系统选择下载对应的调试工具。</b></p>
+<p><b style="background-color: #16a085; color: #ffffff; padding-right: 4px; padding-left: 4px; border-radius: 5px;">2</b><b style="color: #16a085; padding-left: 4px; padding-right: 4px;">Opera 12 浏览器</b></p>
 
 <p>Sphinx 模拟器和 Opera 12 浏览器的具体使用办法请参考《<a href="http://sphinx.oupeng.com/developer-guide" target="_blank">开发工具说明</a>》，概括而言，上述工具主要有如下 3 种应用方法：</p>
 
@@ -48,7 +48,7 @@ date: 2013-08-13 11:30:00
 
 <p>在 Opera 12 浏览器的 Dragonfly 工具栏中选择 Profiler 菜单，可以针对在 Sphinx 模拟器中运行的 JavaScript 代码进行 Profiler 分析。</p>
 
-<p style="background-color: #cccccc; font-size: 13px; padding-bottom: 10px; padding-top: 10px;"><b style="background-color: #898989; color: #ffffff; padding-left: 3px; padding-right: 3px;">TIPS</b>&nbsp;Sphinx 模拟器还有一个小机关，在 Sphinx 模拟器的运行手机 SD 卡根目录中存放一个名为 fps.ini 的空白文件，启动运行 Sphinx 模拟器，其左上角会出现一条文为 “fps ***” 的小 banner，它表示当前 GPU 的运行帧率。</p>
+<p style="background-color: #cccccc; font-size: 13px; padding-bottom: 10px; padding-top: 10px;"><b style="background-color: #898989; color: #ffffff; padding-left: 3px; padding-right: 3px; border-radius: 2px;">提示</b>&nbsp;Sphinx 模拟器还有一个小机关，在 Sphinx 模拟器的运行手机 SD 卡根目录中存放一个名为 fps.ini 的空白文件，启动运行 Sphinx 模拟器，其左上角会出现一条文为 “fps ***” 的小 banner，它表示当前 GPU 的运行帧率。</p>
 
 <p>GPU 的帧率受制于 JavaScript 程序的调用频率。如果程序帧率设定合理（游戏程序帧率至多不应超过 60 fps）：大部分情况下，GPU 的运行帧率都会等于当前 JavaScript 程序的运行帧率，同时，若此帧率明显低于程序的设定帧率，则说明当前程序的性能瓶颈主要在 CPU 运算即上层 JavaScript 的运行上；如果 GPU 的运行帧率明显低于当前 JavaScript 程序的运行帧率，则说明当前程序可能卡在了 GPU 渲染上。</p>
 
@@ -86,19 +86,19 @@ date: 2013-08-13 11:30:00
 
 <p>Sphinx 面向开发者提供如下技术交流的平台，开发者可以提问，交流，发表，吐槽 Sphinx 应用方法和体验，以及在 HTML5、Canvas API、JavaScript 等领域的应用经验</p>
 
-<p><b style="background-color: #2c3e50; color: #2c3e50;">0</b>&nbsp;<a href="http://www.opera.com/docs/specs/presto2.12/#m212-359" target="_blank">Sphinx 论坛</a></p>
+<p><b style="background-color: #798796; padding-right: 3px;">&nbsp;</b>&nbsp;<a href="http://sphinx.oupeng.com/sphinxsample" target="_blank">Sphinx 论坛</a></p>
 
-<p><b style="background-color: #2c3e50; color: #2c3e50;">0</b>&nbsp;<a href="http://www.opera.com/docs/specs/presto2.12/#m212-359" target="_blank">Sphinx 博客</a></p>
+<p><b style="background-color: #798796; padding-right: 3px;">&nbsp;</b>&nbsp;<a href="http://sphinx.oupeng.com/sphinxsample" target="_blank">Sphinx 博客</a></p>
 
-<p><b style="background-color: #2c3e50; color: #2c3e50;">0</b>&nbsp;<a href="http://www.opera.com/docs/specs/presto2.12/#m212-359" target="_blank">Sphinx 联系邮箱</a></p>
+<p><b style="background-color: #798796; padding-right: 3px;">&nbsp;</b>&nbsp;<a href="http://sphinx.oupeng.com/sphinxsample" target="_blank">Sphinx 联系邮箱</a></p>
 
 <p style="background-color: #d40000; color: #ffffff; font-size: 18px; padding-top: 3px; padding-bottom: 3px;"><b style="background-color: #ffffff; color: #d40000; padding-left: 5px; padding-right: 5px; font-size: 16px;">STEP 5</b>&nbsp;<b>开发者平台</b></p>
 
 <p>开发者可以在 Sphinx 开发者平台获得如下服务：</p>
 
-<p><b style="background-color: #2c3e50; color: #2c3e50;">0</b>&nbsp;<a href="http://www.opera.com/docs/specs/presto2.12/#m212-359" target="_blank">注册，管理游戏</a></p>
+<p><b style="background-color: #798796; padding-right: 3px;">&nbsp;</b>&nbsp;<a href="http://sphinx.oupeng.com/sphinxsample" target="_blank">注册，管理游戏</a></p>
 
-<p><b style="background-color: #2c3e50; color: #2c3e50;">0</b>&nbsp;<a href="http://www.opera.com/docs/specs/presto2.12/#m212-359" target="_blank">自动打包</a></p>
+<p><b style="background-color: #798796; padding-right: 3px;">&nbsp;</b>&nbsp;<a href="http://sphinx.oupeng.com/sphinxsample" target="_blank">自动打包</a></p>
 
 <p>后续，Sphinx 还将提供灵活的支付，广告等功能和手段，帮助开发者快速更便捷地实现商业盈利。
 开发者也可以通过 Sphinx 邮箱与我们联系具体的商业合作。</p>
