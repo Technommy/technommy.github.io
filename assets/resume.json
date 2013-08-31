@@ -55,13 +55,30 @@
 			"title": "leader of course production and translator",
 			"description": "<text>",
 			"timespan": "Oct 2011 ~ present",
-			"place": "shenzhen, P.R.China",
+			"place": "Online",
 			"external links": [
 				{
 					"title": "official site",
 					"url": "http://ocourse.org"
 				}
 			]
+		},
+		{
+			"event": "TEDxYouthSZHighschool",
+			"title": "Volunteer",
+			"description": "<text>",
+			"timespan": "Aug 2012",
+			"place": "Shenzhen, P.R.China"
+		}
+	],
+	"honors": [
+		{
+			"title": "Recommendation to MIT",
+			"from": "Prof. Gilbert Strang"
+		},
+		{
+			"title": "...",
+			"from": "...
 		}
 	],
 	"languages": [
@@ -70,12 +87,12 @@
 			"level": "Native"
 		},
 		{
-			"name": "Russian",
-			"level": "Limited Working Proficiency"
-		},
-		{
 			"name": "English",
 			"level": "Fluent"
+		},
+		{
+			"name": "Russian",
+			"level": "Limited Working Proficiency"
 		}
 	]
 }
