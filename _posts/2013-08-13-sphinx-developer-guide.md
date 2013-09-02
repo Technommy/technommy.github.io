@@ -70,9 +70,9 @@ date: 2013-08-13 11:30:00
 
 <p>JavaScript 是弱类型语言，它提供了非常灵活的数据定义方式，这种灵活是以 JavaScript 引擎的负担为代价的，这些负担可能表现为：</p>
 
-<p><b style="background-color: #2980b9; color: #ffffff; padding-left: 4px; padding-right: 4px;">JIT 的代价</b>&nbsp;数据类型的改变，对象属性的改变导致 JavaScript 引擎被迫管理更多的对象类型结构，甚至被迫进行重编译；</p>
+<p><b style="background-color: #4a5867; color: #ffffff; padding-left: 4px; padding-right: 4px;">JIT 的代价</b>&nbsp;数据类型的改变，对象属性的改变导致 JavaScript 引擎被迫管理更多的对象类型结构，甚至被迫进行重编译；</p>
 
-<p><b style="background-color: #2980b9; color: #ffffff; padding-left: 4px; padding-right: 4px;">GC 的代价</b>&nbsp;过分零碎的对象数据块，可能带来更多的 GC 运行负担，等等</p>
+<p><b style="background-color: #4a5867; color: #ffffff; padding-left: 4px; padding-right: 4px;">GC 的代价</b>&nbsp;过分零碎的对象数据块，可能带来更多的 GC 运行负担，等等</p>
 
 <p>高效的应用程序应当尽量避免增大 JavaScript 引擎运行负担的应用模式，例如：</p>
 
