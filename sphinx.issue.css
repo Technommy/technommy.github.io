@@ -1,6 +1,30 @@
 code{
   border:1px solid #ccc;
-  padding-left: 5px; padding-right: 5px; padding-top: 3px; padding-bottom: 3px; border-radius:3px;}
-.tips{background-color: #ddd; font-size: 13px; padding-bottom: 2px; padding-top: 2px; padding-left: 5px;}
-.tag{background-color: #9ba4ae; padding-right: 2px; margin-right: 6px;}
-.numbered{background-color: #16a085; color: #ffffff; padding-right: 4px; padding-left: 4px; border-radius: 5px;}
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius:3px;
+}
+  
+.tips{
+  background-color: #ddd; 
+  font-size: 13px; 
+  padding-bottom: 2px; 
+  padding-top: 2px; 
+  padding-left: 5px;
+}
+  
+.tag{
+  background-color: #9ba4ae; 
+  padding-right: 2px; 
+  margin-right: 6px;
+}
+  
+.numbered{
+  background-color: #16a085; 
+  color: #ffffff; 
+  padding-right: 4px; 
+  padding-left: 4px; 
+  border-radius: 5px;
+}
