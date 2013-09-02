@@ -6,7 +6,7 @@ date: 2013-08-13 11:30:00
 
 > 本文鏈接自 [Sphinx](http://technommy.github.io/2013/08/13/sphinx-developer-guide/) 官網後修改排版
 
-<p style="background-color: #dadada; font-size: 13px; padding-bottom: 10px; padding-top: 10px; padding-left: 15px; padding-right: 15px; border-radius: 3px;">&nbsp;提到「引擎」，大家往往会想到复杂的开发框架，厚重的参考手册，不过，基于 Sphinx，HTML5 开发者并不需要有这些担心，因为 Sphinx 是一款提供标准 HTML5 接口的内核引擎。花半小时阅读一遍本文，HTML5 开发者完全可以掌握 Sphinx 的使用方法。</p>
+<p style="background-color: #dadada; font-size: 13px; padding-bottom: 10px; padding-top: 10px; border-radius: 3px;">&nbsp;提到「引擎」，大家往往会想到复杂的开发框架，厚重的参考手册，不过，基于 Sphinx，HTML5 开发者并不需要有这些担心，因为 Sphinx 是一款提供标准 HTML5 接口的内核引擎。花半小时阅读一遍本文，HTML5 开发者完全可以掌握 Sphinx 的使用方法。</p>
 
 <p>这里，我们提供了一个简单的案例</p>
 
@@ -50,7 +50,7 @@ date: 2013-08-13 11:30:00
 
 <p>在 Opera 12 浏览器的 Dragonfly 工具栏中选择 Profiler 菜单，可以针对在 Sphinx 模拟器中运行的 JavaScript 代码进行 Profiler 分析。</p>
 
-<p style="background-color: #dadada; font-size: 13px; padding-bottom: 10px; padding-top: 10px; padding-left: 15px; padding-right: 15px; border-radius: 3px;"><b style="background-color: #898989; color: #ffffff; padding: 4px; border-radius: 2px;">提示</b>&nbsp;Sphinx 模拟器还有一个小机关，在 Sphinx 模拟器的运行手机 SD 卡根目录中存放一个名为 fps.ini 的空白文件，启动运行 Sphinx 模拟器，其左上角会出现一条文为「FPS ***」的小 banner，它表示当前 GPU 的运行帧率。</p>
+<p style="background-color: #dadada; font-size: 13px; padding-bottom: 10px; padding-top: 10px; border-radius: 3px;"><b style="background-color: #898989; color: #ffffff; padding: 4px; border-radius: 2px;">提示</b>&nbsp;Sphinx 模拟器还有一个小机关，在 Sphinx 模拟器的运行手机 SD 卡根目录中存放一个名为 fps.ini 的空白文件，启动运行 Sphinx 模拟器，其左上角会出现一条文为「FPS ***」的小 banner，它表示当前 GPU 的运行帧率。</p>
 
 <p>GPU 的帧率受制于 JavaScript 程序的调用频率。如果程序帧率设定合理（游戏程序帧率至多不应超过 60 fps）：大部分情况下，GPU 的运行帧率都会等于当前 JavaScript 程序的运行帧率，同时，若此帧率明显低于程序的设定帧率，则说明当前程序的性能瓶颈主要在 CPU 运算即上层 JavaScript 的运行上；如果 GPU 的运行帧率明显低于当前 JavaScript 程序的运行帧率，则说明当前程序可能卡在了 GPU 渲染上。</p>
 
@@ -104,7 +104,7 @@ date: 2013-08-13 11:30:00
 
 <p>后续，Sphinx 还将提供灵活的支付，广告等功能和手段，帮助开发者快速更便捷地实现商业盈利。开发者也可以通过 <a hre="mailto:sphinx@oupeng.com" target="_blank">Sphinx 邮箱</a>与我们联系具体的商业合作。</p>
 
-<p style="background-color: #dadada; font-size: 13px; padding-bottom: 10px; padding-top: 10px; padding-left: 15px; padding-right: 15px; border-radius: 3px;">&nbsp;HTML5 是移动应用的技术趋势之一，性能问题是 HTML5 移动应用面临的行业性瓶颈。Opera／欧朋是全球最大的手机浏览器提供商，也是极少数完整具备内核技术的厂商。Sphinx 的开发团队是一帮有极客精神的技术控，我们非常希望与开发者群体一起，共同探寻突破 HTML5 手机应用技术瓶颈的道路，共同实现 HTML5 手机应用和手机游戏的商业成功。</p>
+<p style="background-color: #dadada; font-size: 13px; padding-bottom: 10px; padding-top: 10px; border-radius: 3px;">&nbsp;HTML5 是移动应用的技术趋势之一，性能问题是 HTML5 移动应用面临的行业性瓶颈。Opera／欧朋是全球最大的手机浏览器提供商，也是极少数完整具备内核技术的厂商。Sphinx 的开发团队是一帮有极客精神的技术控，我们非常希望与开发者群体一起，共同探寻突破 HTML5 手机应用技术瓶颈的道路，共同实现 HTML5 手机应用和手机游戏的商业成功。</p>
 
 
 <!--
