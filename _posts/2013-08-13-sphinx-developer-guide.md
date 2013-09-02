@@ -38,15 +38,15 @@ date: 2013-08-13 11:30:00
 
 <p>Sphinx 模拟器和 Opera 12 浏览器的具体使用办法请参考《<a href="http://sphinx.oupeng.com/developer-guide" target="_blank">开发工具说明</a>》，概括而言，上述工具主要有如下 3 种应用方法：</p>
 
-<p><b style="background-color: #16a085; color: #16a085; padding-right: 1px;">&nbsp;</b>&nbsp;<b style="color: #16a085; padding-right: 2px;">1</b><b style="background-color: #16a085; color: #ffffff; padding-left: 4px; padding-right: 4px;">模拟运行</b></p>
+<p><b style="background-color: #34495e; color: #ffffff; padding-left: 4px; padding-right: 4px;">模拟运行</b></p>
 
 <p>Sphinx 模拟器提供传统浏览器的操作模式，开发者可以通过 URL 方式指定运行程序，其运行效果等同于 Sphinx 打包运行效果。</p>
 
-<p><b style="background-color: #16a085; color: #16a085; padding-right: 1px;">&nbsp;</b>&nbsp;<b style="color: #16a085; padding-right: 2px;">2</b><b style="background-color: #16a085; color: #ffffff; padding-left: 4px; padding-right: 4px;">DEBUG</b></p>
+<p><b style="background-color: #34495e; color: #ffffff; padding-left: 4px; padding-right: 4px;">DEBUG</b></p>
 
 <p>Opera 12 浏览器与 Sphinx 模拟器配合使用，可以通过 “远程调试” 的方式 debug 在 Sphinx 模拟器中运行的 HTML5/JavaScript 代码。其操作方式等同于 Opera 浏览器的开发者工具 Dragonfly。</p>
 
-<p><b style="background-color: #16a085; color: #16a085; padding-right: 1px;">&nbsp;</b>&nbsp;<b style="color: #16a085; padding-right: 2px;">3</b><b style="background-color: #16a085; color: #ffffff; padding-left: 4px; padding-right: 4px;">性能分析</b></p>
+<p><b style="background-color: #34495e; color: #ffffff; padding-left: 4px; padding-right: 4px;">性能分析</b></p>
 
 <p>在 Opera 12 浏览器的 Dragonfly 工具栏中选择 Profiler 菜单，可以针对在 Sphinx 模拟器中运行的 JavaScript 代码进行 Profiler 分析。</p>
 
