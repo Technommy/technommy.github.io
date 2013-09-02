@@ -50,7 +50,7 @@ date: 2013-08-13 11:30:00
 
 <p>在 Opera 12 浏览器的 Dragonfly 工具栏中选择 Profiler 菜单，可以针对在 Sphinx 模拟器中运行的 JavaScript 代码进行 Profiler 分析。</p>
 
-<p style="background-color: #dadada; font-size: 13px; padding-bottom: 10px; padding-top: 10px; border-radius: 3px;"><b style="background-color: #898989; color: #ffffff; padding: 4px; border-radius: 2px;">提示</b>&nbsp;Sphinx 模拟器还有一个小机关，在 Sphinx 模拟器的运行手机 SD 卡根目录中存放一个名为 fps.ini 的空白文件，启动运行 Sphinx 模拟器，其左上角会出现一条文为「FPS ***」的小 banner，它表示当前 GPU 的运行帧率。</p>
+<p style="background-color: #dadada; font-size: 13px; padding-bottom: 10px; padding-top: 10px; border-radius: 3px;"><b style="background-color: #898989; color: #ffffff; padding: 2px; border-radius: 2px;">提示</b>&nbsp;Sphinx 模拟器还有一个小机关，在 Sphinx 模拟器的运行手机 SD 卡根目录中存放一个名为 fps.ini 的空白文件，启动运行 Sphinx 模拟器，其左上角会出现一条文为「FPS ***」的小 banner，它表示当前 GPU 的运行帧率。</p>
 
 <p>GPU 的帧率受制于 JavaScript 程序的调用频率。如果程序帧率设定合理（游戏程序帧率至多不应超过 60 fps）：大部分情况下，GPU 的运行帧率都会等于当前 JavaScript 程序的运行帧率，同时，若此帧率明显低于程序的设定帧率，则说明当前程序的性能瓶颈主要在 CPU 运算即上层 JavaScript 的运行上；如果 GPU 的运行帧率明显低于当前 JavaScript 程序的运行帧率，则说明当前程序可能卡在了 GPU 渲染上。</p>
 
