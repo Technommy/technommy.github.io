@@ -3,7 +3,7 @@ layout: page
 title: Mini Résumé
 ---
 
-Resume created using JSON, download the full version by clicking <a href="/assets/resume.json" target="_blank">me</a>.
+<a href="https://github.com/technommy/MyResume" target="_blank">Résumé</a> created using JSON, download the full version by clicking <a href="/assets/resume.json" target="_blank">me</a>.
 
 {% highlight json %}
 {
