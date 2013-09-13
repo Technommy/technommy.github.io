@@ -12,7 +12,7 @@ title: Mini Résumé
 			"zh_name": "Jingtao Liu",
 			"en_name": "Tommy",
 			"gender": "male",
-			"identification": "student, hacker",
+			"identification": "student",
 			"programming": "HTML > CSS > PHP > JavaScript > Python > OCaml > C++",
 			"language": "zh_CN, en, ru"
 		}
