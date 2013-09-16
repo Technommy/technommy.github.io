@@ -19,3 +19,7 @@ title: Mini Résumé
 	]
 }
 {% endhighlight %}
+
+<a href="http://cn.linkedin.com/in/technommy">
+	<img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Jingtao "Tommy" Liu's profile on LinkedIn">
+</a>
