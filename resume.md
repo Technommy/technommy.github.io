@@ -20,6 +20,8 @@ title: Mini Résumé
 }
 {% endhighlight %}
 
+<p style="text-align: center;">
 <a href="http://www.linkedin.com/in/technommy">
 	<img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View my profile on LinkedIn">
 </a>
+</p>
