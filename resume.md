@@ -13,7 +13,7 @@ title: Mini Résumé
 			"en_name": "Tommy",
 			"gender": "male",
 			"identification": "student",
-			"programming": "HTML > CSS > PHP > JavaScript > Python > OCaml > C++",
+			"major programming": "HTML > CSS (incl. less) > JavaScript > C++",
 			"language": "zh_CN, en, ru"
 		}
 	]
