@@ -73,7 +73,7 @@
 	],
 	"programming": [
 		{
-			"language": "HTML / CSS / PHP / JavaScript / Python / OCaml / C++",
+			"languages": "HTML / CSS / PHP / JavaScript / Python / OCaml / C++",
 			"webtools": "Less etc."
 		}
 	],
