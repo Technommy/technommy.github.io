@@ -8,7 +8,7 @@
 			"place": "Shenzhen, P.R.China",
 			"media-report": [
 				{
-					"shenzhen-newpaper": "http://wb.sznews.com/html/2012-11/06/content_2264722.htm",
+					"shenzhen-newspaper": "http://wb.sznews.com/html/2012-11/06/content_2264722.htm",
 					"tencent-technology-section": "http://tech.qq.com/a/20121121/000147.htm"
 				}
 			]
@@ -69,6 +69,12 @@
 			"description": "<text>",
 			"timespan": "Aug 2012",
 			"place": "Shenzhen, P.R.China"
+		}
+	],
+	"programming": [
+		{
+			"language": "HTML / CSS / PHP / JavaScript / Python / OCaml / C++",
+			"webtools": "Less etc."
 		}
 	],
 	"honors": [
