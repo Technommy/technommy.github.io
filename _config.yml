@@ -1,6 +1,6 @@
 title:            Tommy
 description:      A jekyll theme by /Mman.
-url:              # Site url.
+url:              /
 signoff:          # Your name.
 disqus_shortname: technologier # disqus comment thread for post header options. ( leave blank if unwanted. )
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
