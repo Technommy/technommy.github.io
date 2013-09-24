@@ -9,10 +9,6 @@ Hi there, I'm Tommy, global_id as technommy, born Aug 26 <a href="http://en.wiki
 
 I founded the <a href="http://adc-cn.org/?page_id=797" target="_blank">Adolescent Developer Community</a> last year, now I'm an intern at <a href="http://sphinx.oupeng.com/" target="_blank">Opera Software China</a> during <a href="http://en.wikipedia.org/wiki/Gap_year" target="_blank">gap year</a> to University of California, Berkeley. 
 
-Please check my resume if you're interested in me. :-P
-
-> Musing Aside Periphery.
-
 <a href="mailto:technologier@gmail.com" target="_blank" class="big-button blue">EMAIL ME :-)</a>
 
 <p style="color: #7f8c8d; font-size: 10px;">//Much appreciated to [/muan](https://github.com/muan) for created such fabulous theme on Jekyll.</p>
