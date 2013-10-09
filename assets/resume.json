@@ -65,16 +65,16 @@
 			"place": "Online",
 			"course production": [
 				{
-					"18.06@MIT"
+					"18.06@MIT": "Linear Algebra"
 				},
 				{
-					"Math.3C@UCLA"
+					"Math.3C@UCLA": "Probability for Life Science student"
 				},
 				{
-					"EE364A@Stanford"
+					"EE364A@Stanford": "Convex Optimization I"
 				},
 				{
-					"8.01@MIT"
+					"8.01@MIT": "Classical Mechanics"
 				}
 			],
 			"external links": [
