@@ -63,6 +63,20 @@
 			"description": "<text>",
 			"timespan": "Oct 2011 ~ present",
 			"place": "Online",
+			"course production": [
+				{
+					"18.06@MIT"
+				},
+				{
+					"Math.3C@UCLA"
+				},
+				{
+					"EE364A@Stanford"
+				},
+				{
+					"8.01@MIT"
+				}
+			],
 			"external links": [
 				{
 					"title": "official site",
