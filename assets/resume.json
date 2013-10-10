@@ -102,6 +102,13 @@
 		{
 			"title": "...",
 			"from": "...
+		},
+		{
+			"title": "Black belt of Taekwondo",
+			"from": "Shenzhen Taekwondo Association"
+			"certification": [
+				"photo_copy": "<url>",
+			]
 		}
 	],
 	"languages": [
