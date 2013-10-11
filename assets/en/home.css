@@ -1,0 +1,704 @@
+/**
+ * 站点首页独立css样式文件
+ */
+
+/*css reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+}
+
+/*tool css*/
+.clearfix {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+
+/*page css*/
+/*base module*/
+a {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+:focus, :active {
+    outline: none;
+}
+
+body {
+    background-color: #fff;
+    background-image: none !important;
+}
+
+#container {
+    font-size: 13px;
+    font-family: "\5FAE\8F6F\96C5\9ED1", "Lucida Grande", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+
+#header, #main, #footer {
+    width: 940px;
+    margin: 0 auto;
+}
+
+/*header*/
+#header {
+    margin-top: 30px;
+}
+
+#header .nav {
+    font-size: 15px;
+    height: 55px;
+    width: 575px;
+}
+
+#header .nav a {
+    color: #666;
+    padding: 20px;
+    text-decoration: none;
+}
+
+#header .nav a:hover {
+    color: #09c;
+}
+
+#header .nav form {
+    margin-top: 14px;
+    border: 1px solid #dcdcdc;
+    height: 27px;
+    padding: 0;
+    width: 170px;
+}
+
+#header .nav .search-input {
+    padding: 5px 5px 6px;
+    border: 0 none;
+    margin: 0;
+    width: 132px;
+    float: left;
+    overflow: visible;
+}
+
+#header .nav input.submit-btn {
+    background: url(images/search.png) no-repeat 0 0;
+    width: 27px;
+    height: 27px;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    float: right;
+    text-indent: -99999em;
+    zoom: 1;
+}
+
+/*banner*/
+.red_line {
+    border-bottom: 4px solid #cc0f16;
+    padding-top: 10px;
+    height: 0;
+    width: 100%;
+    margin: 0 auto 10px;
+    min-width: 940px;
+}
+
+.banner {
+    position: relative;
+    width: 940px;
+    height: 280px;
+    margin: 25px auto 0px;
+}
+
+.banner .item {
+    width: 940px;
+    height: 280px;
+    position: absolute;
+    display: block;
+}
+
+.banner .cur {
+    z-index: 9999 !important;
+}
+
+.banner .item a {
+    display: block;
+    height: 139px;
+    position: absolute;
+    background: url("images/sponsors.png") no-repeat;
+}
+
+.banner .item a.item01 {
+    width: 93px;
+    top: 40px;
+    left: 197px;
+}
+
+.banner .item a.item02 {
+    top: 40px;
+    left: 400px;
+    width: 96px;
+    background-position: -93px 0;
+}
+
+.banner .item a.item03 {
+    width: 103px;
+    background-position: -188px 0;
+    top: 47px;
+    right: 250px;
+}
+
+.banner .navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 9999;
+}
+
+.banner .navigation a {
+    width: 20px;
+    height: 20px;
+    background: #000;
+    color: #fff;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.banner .navigation a.selected {
+    background: #cc0000;
+    color: #fff;
+}
+
+/*main*/
+#main {
+    margin-top: 0px;
+    color: #666666;
+    position: relative;
+}
+
+#main .block {
+    padding: 30px 0;
+    position: relative;
+}
+
+#main .intro a {
+    text-decoration: none;
+}
+
+#main h2 {
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F0E5E5;
+    position: relative;
+}
+
+#main .demo h2 {
+    border-bottom: 0;
+}
+
+#main h2 a {
+    font-size: 24px;
+    color: #676761;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+#main .intro-content {
+    width: 679px;
+    background: #fff;
+    padding: 0px 20px 0px 0px;
+    margin-top: 15px;
+}
+
+#main .dev-tools {
+    width: 239px;
+    font-size: 14px;
+    margin-top: 15px;
+    border-left: 1px solid #F0E5E5;
+}
+
+#main .dev-tools-item span {
+    color: #1c1c1c;
+}
+
+#main .dev-tools-item {
+    margin: 5px 0 5px 9px;
+    width: 170px;
+    float: left;
+    padding: 5px 0 5px 50px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+}
+
+#main .dev-doc {
+    background: url(images/dev-doc.png) 5px center no-repeat white;
+}
+
+#main .standard-doc {
+    background: url(images/standard-doc.png) 5px center no-repeat white;
+}
+
+#main .emulator-download {
+    background: url(images/debug-tool-download.png) 5px center no-repeat white;
+}
+
+#main .debug-tool-download {
+    background: url(images/emulator-download.png) 5px center no-repeat white;
+}
+
+#main .intro h3 {
+    margin: 0px 0;
+}
+
+#main .intro h3 a {
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+#main h3 {
+    font-weight: bold;
+}
+
+#main h3 a {
+    color: #1c1c1c;
+    display: block;
+    font-size: 18px;
+}
+
+#main .detail {
+    font-size: 13px;
+}
+
+#main .detail-o {
+    font-size: 13px;
+}
+
+#main h2 a.detail {
+    display: inline;
+    position: absolute;
+    height: 21px;
+    top: 12px;
+    top: 12 px\9;
+    left: 102px;
+    text-decoration: none;
+    font-weight: normal;
+    color: #676761;
+}
+
+#main .demo h2 a.detail {
+    left: 84px;
+    top: 8px;
+    top: 8 px\9;
+}
+
+#main .blog-info {
+    padding: 2px 0;
+    font-size: 10px;
+}
+
+#main h4 a {
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    color: #1c1c1c;
+    text-decoration: none;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+}
+
+#main .item {
+    width: 247px;
+    margin-right: 12px;
+    position: relative;
+    *zoom: 1;
+}
+
+#main .blog-list .item {
+    background: #fff;
+    padding: 0px 10px 15px 40px;
+    margin-top: 15px;
+    width: 254px;
+    border-right: 1px solid #f0f0e5;
+}
+
+#main .blog-list .i01 {
+    background: #fff url("images/item_ico01.png") 0px 0px no-repeat;
+}
+
+#main .blog-list .i02 {
+    background: #fff url("images/item_ico02.png") 0px 0px no-repeat;
+}
+
+#main .blog-list .i03 {
+    background: #fff url("images/item_ico03.png") 0px 0px no-repeat;
+}
+
+#main .blog-list .item:last-child {
+    border-right: none;
+    margin-right: 0;
+}
+
+#main .blog-list h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 15px;
+}
+
+#main .date-wrap {
+    background: #fff5f5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    border: 1px solid #f0e5e5;
+    border-left: none;
+    border-top: none;
+}
+
+#main .date-wrap .date {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#main .date-wrap .month {
+    line-height: 15px;
+    font-size: 10px;
+}
+
+#main p {
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+#main .demo-content {
+    border-top: 1px solid #F0E5E5;
+    padding-top: 20px
+}
+
+#main .demo-list {
+    width: 637px;
+    float: left;
+    border-right: 1px solid #F0E5E5;
+}
+
+#main .home-sidebar {
+    float: right;
+    width: 302px;
+}
+
+#main .release-note {
+    padding-top: 20px;
+    border-bottom: 1px solid #F0E5E5;
+}
+
+#main .release-note a {
+    color: #09c;
+}
+
+.widget {
+    padding: 50px 10px 8px 20px;
+}
+
+.widgettitle {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 19px;
+    color: #676761;
+    padding-bottom: 13px;
+}
+
+.widget li {
+    background: url(images/footer-bullet.png) no-repeat 0 8px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.widget a {
+    color: #676761;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+#main .demo-list div.l {
+    width: 284px;
+    height: 266px;
+    overflow: hidden;
+    margin-right: 14px;
+    padding: 10px;
+}
+
+#main .demo-list div.l div {
+    text-align: center;
+    font-size: 140%;
+    width: 264px;
+    padding: 10px 0;
+}
+
+#main .demo-list div a {
+    display: block;
+}
+
+#main .demo-list div a img {
+    display: block;
+    width: 284px;
+}
+
+#main .demo-list div.last-item {
+    border: 0;
+    margin-right: 0;
+}
+
+.meta .date {
+    float: right;
+    font-size: 14px;
+    color: #666;
+    font-family: Arial;
+}
+
+.intro-content a.detail, .item a.detail {
+    color: #09c;
+    text-decoration: none;
+}
+
+.intro-content a.detail {
+    margin-left: 20px;
+}
+
+/*footer*/
+#footer {
+    color: #b4b4b4;
+    margin: 30px auto;
+    border-top: 1px solid #f0e5e5;
+    padding: 10px 0 80px;
+}
+
+#footer a {
+    color: #09c;
+}
+
+.browser-info {
+    color: #333;
+    float: left;
+}
+
+.copyright, .browser-spread {
+    color: #999;
+    margin-top: 20px;
+    float: right;
+}
+
+.copyright {
+    float: left;
+}
+
+/*tools-down*/
+.down-box {
+    position: absolute;
+    right: 0;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 428px;
+    height: 100px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    z-index: 999999;
+    top: 295px;
+    display: none;
+    font-size: 12px
+}
+
+.down-box .links_down a {
+    margin: 0 5px;
+}
+
+.down-box .delete, .down-box .pl_item a.cover {
+    background: url("images/dialog_box_ico.png") no-repeat;
+}
+
+.down-box .delete {
+    float: right;
+    display: block;
+    width: 31px;
+    height: 31px;
+    background-position: 0 -114px;
+    right: 0;
+    cursor: pointer;
+    top: 0;
+    margin-top: -10px;
+    margin-right: -10px;
+    _margin-right: -5px;
+    overflow: hidden;
+    text-indent: -99999em;
+}
+
+.down-box h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.down-box .pl_item {
+    width: 110px;
+    float: left;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.down-box .pl_item a {
+    color: #2db5e3;
+}
+
+.down-box .win {
+    padding-right: 15px;
+}
+
+.down-box .linux {
+    width: 190px;
+    border-right: 1px solid #F0E5E5;
+    border-left: 1px solid #F0E5E5;
+}
+
+.down-box .pl_item a.cover {
+    display: block;
+    height: 37px;
+    overflow: hidden;
+    text-indent: -99999em;
+    margin: 0 auto 10px;
+    width: 110px;
+}
+
+.down-box .win a.cover {
+    background-position: 0 -76px;
+}
+
+.down-box .linux a.cover {
+    background-position: 0 -38px;
+    cursor: default;
+}
+
+.start_btn, .start_btn .col_l, .start_btn .col_r, .start_btn em {
+    background: url("images/start_btn.png") no-repeat;
+}
+
+.start_btn {
+    display: block;
+    background-position: 0 -54px;
+    background-repeat: repeat-x;
+    height: 54px;
+    width: 328px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+.start_btn span {
+    display: block;
+    width: 9px;
+    height: 54px;
+    overflow: hidden;
+    float: left;
+}
+
+.start_btn em {
+    font-style: normal;
+    display: block;
+    width: 100px;
+    float: left;
+    background-position: right 0;
+    margin-left: 85px;
+}
+
+.start_btn .col_l {
+    background-position: 0 -108px;
+}
+
+.start_btn .col_r {
+    background-position: 0 -162px;
+    float: right;
+}
+
+/*reset style*/
+.ml01 {
+    margin-left: 20px;
+}
+
+#main .release-note  a.link-down {
+    background: url("images/link_down_bg.png") no-repeat;
+    display: block;
+    padding-top: 1px;
+    color: #fff;
+    width: 120px;
+    height: 28px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}

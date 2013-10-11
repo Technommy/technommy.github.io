@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zh-CN">
+<head>
+	<meta charset="UTF-8" />
+	<title>Democase | Sphinx Game Engine</title>
+        <meta name="keywords" content="游戏示例" />
+    <meta name="description" content="" />
+	<link rel="stylesheet" href="http://sphinx.oupeng.com/wp-content/themes/sphinx/style.css" type="text/css" />
+    <link href="http://sphinx.oupeng.com/wp-content/themes/sphinx/images/favicon.ico" rel="SHORTCUT ICON" />
+    <link rel="alternate" type="application/rss+xml" title="Sphinx引擎开发社区 » Feed" href="/feed" />
+				<link rel="stylesheet" href="http://sphinx.oupeng.com/wp-content/themes/sphinx/css/tomorrow-night-bright.css" type="text/css" />
+		<!--[if lt IE 9]><script src="http://sphinx.oupeng.com/wp-content/themes/sphinx/js/html5.js" type="text/javascript"></script><![endif]-->
+	<script type="text/javascript">document.documentElement.className = 'js';</script>
+	<script type="text/javascript">
+var duoshuoQuery = {"short_name":"sphinx-dev","sso":{"login":"https:\/\/sphinx.oupeng.com\/wp-login.php?action=duoshuo_login","logout":"https:\/\/sphinx.oupeng.com\/wp-login.php?action=logout&_wpnonce=a8c1b7e7c5"}};
+duoshuoQuery.sso.login += '&redirect_to=' + encodeURIComponent(window.location.href);
+duoshuoQuery.sso.logout += '&redirect_to=' + encodeURIComponent(window.location.href);
+</script>
+<script type="text/javascript" src="http://static.duoshuo.com/embed.js" charset="UTF-8" async="async"></script>
+
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42991402-1', 'oupeng.com');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body class="page page-id-65 page-template-default logged-in">
+    <div id="header" class="clearfix">
+        <div class="logo l">
+            <h1><a href="/en" title="Sphinx开发者社区" ><img src="http://sphinx.oupeng.com/wp-content/themes/sphinx/images/logo.png" alt="Sphinx开发者社区"></a></h1>
+        </div>
+        <div class="nav r">
+            <a href="/release-note" class="bbs l">Emulator</a>
+            <a href="http://ge.oupeng.com" class="bbs l">Devlopers</a>
+            <a href="http://bbs.oupeng.com/forum.php?mod=forumdisplay&fid=91" class="developer l">Forum</a>
+            <form action="/" method="get" class="r clearfix"><input placeholder="搜索" type="text" id="search" value="" name="s" class="search-input" /><input class="submit-btn" type="submit" name="sub" /></form>        </div>
+    </div>
+    <div class="red_line">&nbsp;</div>
+	<div id="container">
+				<div id="main-area">
+						
+
+<style type="text/css">
+.demo_desc{
+    margin-top: 30px;
+}
+.demo_desc strong{
+    font-size: 18px;
+}
+.demo_item{
+    margin: 15px 0;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0;
+}
+.demo_item .col01{
+    width: 200px;
+    float: left;
+    margin-top: 10px;
+}
+.demo_item .col01 img{
+    display: block;
+}
+.demo_item .col02{
+    width: 400px;
+    float: left;
+    text-align: left;
+    margin-left: 50px;
+    padding:20px 0 10px;
+}
+.demo_item .col03{
+    margin-left: 50px;
+    width:230px;
+    float:left;
+}
+.demo_item .col03 .col-item{
+    position:relative;
+    margin-top:10px;
+}
+.demo_item h2{
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.demo_item h3{
+    color: #666;
+    font-size: 14px;
+    padding-top: 10px;
+    margin-bottom:5px;
+}
+.demo_item .url_dis{
+    color: #000;
+}
+.url_dis a{
+    color: #09c;
+}
+.demo_dis{
+    float: left;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+</style>
+<div class="demo_content">
+<div class="demo_desc"><strong>简介：</strong>您可以在手机上访问同一 demo，对比该 demo 在传统浏览器和 Sphinx 游戏引擎上的运行效果。</div>
+
+<div class="demo_item clearfix" id="bujianghu">
+   <h2>Demo 1: 不江湖</h2>
+   <div class="col01" style="width: 200px"><iframe height="" width=200 src="http://player.youku.com/embed/XNTkzNzY1MDgw" frameborder=0 allowfullscreen="true"></iframe><div style="text-align: center; font-style: italic">（双击全屏）</div>
+
+</div>
+   <div class="col02">一款基于 CreateJS 框架的大型多人在线角色扮演类游戏。游戏中人物行走、对话、战斗中的招式全部由序列帧动画组成。贴图资源在百兆量级，支持本地和远程两种加载方式，支持远程增量透明更新。游戏场景使用 HTML5 Canvas2d API 绘制，对话框等则采用传统的 HTML + CSS 技术，网络通信基于 WebSocket 实现。游戏的整体像素填充率平均在 1.5～2.5 倍屏幕尺寸。在主流中高端机型（小米 2、三星 S3／S4）上可以维持在 40〜50 fps 之间。</div>
+<div class="col03">
+   <div class="col-item clearfix">
+     <div class="demo_dis"><img src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/bujianghu_qr1.png" alt="" title="不江湖" width="60" height="60" class="alignnone size-full wp-image-588" /></div>
+     <h3>《不江湖官网》</h3>
+     <div class="url_dis"><a title="不江湖" href="http://www.bujianghu.com">进入 ≫</a></div>
+   </div>
+</div>
+</div>
+
+<div id="moonwarriors" class="demo_item clearfix">
+<h2>Demo 2:  Moon Warriors</h2>
+<div class="col01"><img class="alignnone size-full wp-image-472" title="moon warriors" src="/wp-content/themes/sphinx/images/moonwarriors.png" alt="" width="200" /></div>
+<div class="col02">Moon Warriors 是知名的 2D 游戏引擎 <a href="http://www.cocos2d-x.org">Cocos2d</a> 的官方示例。Sphinx 为 Cocos2d-html5 引擎做了专门的适配与调优，所有基于 Cocos2d-html5 开发的游戏在 Sphinx 中可以获得更佳的性能和体验。同时，我们也对 <a href="https://github.com/oupengsoftware/cocos2d-html5/commits/taskbranch/COCOS2D-51-1-rebased">Cocos2d 的源代码进行了部分优化</a>，以更好的适配主流的 JavaScript 引擎。</div>
+<div class="col03">
+<div class="col-item clearfix">
+<div class="demo_dis"><img class="alignnone size-full wp-image-546" title="moon warriors" src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/moonwarriors1.png" alt="" width="60" height="60" /></div>
+<h3>手机浏览器演示</h3>
+<div class="url_dis"><a title="moonwarriors" href="/demos/moonwarriors/">进入 ≫</a></div>
+</div>
+<div class="col-item clearfix">
+<div class="demo_dis clearfix"><img class="alignnone size-full wp-image-547" title="moonwarriors_apk" src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/moonwarriors_apk1.png" alt="" width="60" height="60" /></div>
+<h3>基于 Sphinx 演示<span style="font-size: 90%">（ARMv7）</span></h3>
+<div class="url_dis"><a title="moonwarriors.apk" href="/demos/moonwarriors.apk">下载 ≫</a></div>
+</div>
+</div>
+</div>
+<div class="demo_item clearfix">
+
+<div id="monsters" class="demo_item clearfix">
+<h2>Demo 3:  Monsters</h2>
+<div class="col01"><img class="alignnone size-full wp-image-371" title="monsters" src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/demo02.png" alt="" width="200" /></div>
+<div class="col02">Monsters 是基于 HTML5 Canvas2d 的位图测试，代表了典型的 2D 游戏场景。场景中包含了 100 个精灵（monster），精灵的位置在每一帧中都会刷新，这个游戏的帧率能够很好的说明设备在一个场景能够同时处理图元的数量。如果一个游戏的复杂度和这个示例相当（主场景中包含 100 个左右的图元），理论上可以获得和这个示例相当的性能。</div>
+<div class="col03">
+<div class="col-item clearfix">
+<div class="demo_dis"><img class="alignnone size-full wp-image-542" title="monsters" src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/monsters_html21.png" alt="" width="60" height="60" /></div>
+<h3>手机浏览器演示</h3>
+<div class="url_dis"><a title="monsters" href="http://sphinx.oupeng.com/demos/monsters">进入 ≫</a></div>
+</div>
+<div class="col-item clearfix">
+<div class="demo_dis clearfix"><img class="alignnone size-full wp-image-543" title="monsters_apk" src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/monstersAPKQR1.png" alt="" width="60" height="60" /></div>
+<h3>基于 Sphinx 演示<span style="font-size: 90%">（ARMv7）</span></h3>
+<div class="url_dis"><a title="monsters.apk" href="/demos/monsters.apk">下载 ≫</a></div>
+</div>
+</div>
+</div>
+
+<div id="cutrope" class="demo_item clearfix">
+<h2>Demo 4:  Cut the Rope</h2>
+<div class="col01"><img class="alignnone size-full wp-image-193" title="cut rope" src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/demo04.png" alt="" width="200" /></div>
+<div class="col02">Cut the Rope（割绳子）是一款老少咸宜的休闲游戏，兼容众多平台。其 HTML5 移植版本充分保留了原作的交互性和娱乐性，同时也证明了 JavaScript 有能力进行复杂运算（基于物理的运动模型），并保证一定的性能。本示例为移动设备进行了专门的适配，原版请参考<a href="http://www.cuttherope.ie/">官方网页</a>。建议使用分辨率 1280x800 的设备运行，以获得最佳体验。</div>
+<div class="col03">
+<div class="col-item clearfix">
+<div class="demo_dis"><img class="alignnone size-full wp-image-544" title="cut rope" src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/cutropeQR11.png" alt="" width="60" height="60" /></div>
+<h3>手机浏览器演示</h3>
+<div class="url_dis"><a title="cutrope" href="http://sphinx.oupeng.com/demos/cutrope">进入 ≫</a></div>
+</div>
+<div class="col-item clearfix">
+<div class="demo_dis"><img class="alignnone size-full wp-image-545" title="cutrope_apk" src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/cutropeAPKQR11.png" alt="" width="60" height="60" /></div>
+<h3>基于 Sphinx 演示<span style="font-size: 90%">（ARMv7）</span></h3>
+<div class="url_dis"><a title="cutrope.apk" href="/demos/cutrope.apk">下载 ≫</a></div>
+</div>
+</div>
+</div>
+
+<h2>Demo 5:  Frozen Bubble</h2>
+<div class="col01"><img class="alignnone size-full wp-image-194" title="frozen bubble" src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/demo01.png" alt="" width="200" /></div>
+<div class="col02"><a href="http://en.wikipedia.org/wiki/Frozen_Bubble">Frozen Bubble</a> 是一款知名的游戏泡泡龙（益智游戏）改编的开源项目。本 demo 是欧朋工程师从安卓 Java 版移植到 HTML5 的版本，更改原文件的 <a href="https://github.com/oupengsoftware/frozenbubble/blob/new-theme/html5/index.html#L70">index.html</a> 即可以自行设计关卡！&nbsp;
+
+本示例未针对桌面浏览器适配。另外，浏览器需要支持 <code>&lt;meta viewport&gt;</code> 里的 <code>target-densityDpi</code> 属性。
+
+</div>
+<div class="col03">
+<div class="col-item clearfix">
+<div class="demo_dis"><img class="alignnone size-full wp-image-548" title="frozen bubble" src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/frozenbubble_html11.png" alt="" width="60" height="60" /></div>
+<h3>手机浏览器演示</h3>
+<div class="url_dis"><a title="fronzenbubble" href="/demos/frozenbubble">进入 ≫</a></div>
+</div>
+<div class="col-item clearfix">
+<div class="demo_dis clearfix"><img class="alignnone size-full wp-image-549" title="frozenbubble_apk" src="http://sphinx.oupeng.com/wp-content/uploads/2013/04/frozenbubble_apk11.png" alt="" width="60" height="60" /></div>
+<h3>基于 Sphinx 演示<span style="font-size: 90%">（ARMv7）</span></h3>
+<div class="url_dis"><a title="frozenbubble.apk" href="/demos/frozenbubble.apk">下载 ≫</a></div>
+</div>
+</div>
+</div>
+</div>
+<!--end demo_content-->			</div> 	<!-- end #main-area -->		
+		<footer id="main_footer" class="clearfix">
+            <section class="clearfix">
+                <div class="browser-info fn-left">
+                    欧朋浏览器适用于 安卓、塞班、黑莓、JAVA 和数千种手机， 用手机登录 <a href="http://m.oupeng.com/">m.oupeng.com</a> 快速安装。
+                </div>
+            </section>
+            <section class="clearfix">
+                <div class="copyright fn-left">
+                    Copyright © 2013 欧朋保留所有权利。
+                </div>
+                <div class="browser-spread fn-right">
+                    ＊欧朋浏览器遍布全世界，200多个国家，超过2.5亿用户。
+                </div>
+            </section>
+		</footer> <!-- end #main_footer -->
+	</div> <!-- end #container -->
+
+	         <script type="text/javascript">
+            function setShare(title, url) {
+               jiathis_config.title = title;
+               jiathis_config.url = url;
+            }
+            var jiathis_config = {}
+         </script>
+		 <script src="http://v3.jiathis.com/code_mini/jia.js?uid=1334656926942169"></script>
+     <script src="http://sphinx.oupeng.com/wp-content/themes/sphinx/js/highlight.min.7.2.js"></script><script>hljs.initHighlightingOnLoad();</script>            <script type="text/javascript">
+                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffd00103dbc558f7a1e4c1e3c12fdcb7e' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+</body>
+</html>
