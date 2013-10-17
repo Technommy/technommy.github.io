@@ -246,7 +246,7 @@ body {
 #main h2 {
     margin-bottom: 0px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #F0E5E5;
+    border-bottom: 1px solid #eee;
     position: relative;
 }
 
@@ -272,7 +272,7 @@ body {
     width: 239px;
     font-size: 14px;
     margin-top: 15px;
-    border-left: 1px solid #F0E5E5;
+    border-left: 1px solid #eee;
 }
 
 #main .dev-tools-item span {
@@ -376,10 +376,10 @@ body {
 
 #main .blog-list .item {
     background: #fff;
-    padding: 0px 10px 15px 40px;
-    margin-top: 15px;
+    padding: 10px 0px 0px 40px;
+    margin-top: 20px;
     width: 254px;
-    border-right: 1px solid #f0f0e5;
+    border-right: 0px solid #eee;
 }
 
 #main .blog-list .i01 {
@@ -414,7 +414,7 @@ body {
     width: 36px;
     height: 36px;
     text-align: center;
-    border: 1px solid #f0e5e5;
+    border: 1px solid #eee;
     border-left: none;
     border-top: none;
 }
@@ -436,14 +436,14 @@ body {
 }
 
 #main .demo-content {
-    border-top: 1px solid #F0E5E5;
+    border-top: 1px solid #eee;
     padding-top: 20px
 }
 
 #main .demo-list {
     width: 637px;
     float: left;
-    border-right: 1px solid #F0E5E5;
+    border-right: 0px solid #eee;
 }
 
 #main .home-sidebar {
@@ -453,7 +453,7 @@ body {
 
 #main .release-note {
     padding-top: 20px;
-    border-bottom: 1px solid #F0E5E5;
+    border-bottom: 1px solid #eee;
 }
 
 #main .release-note a {
@@ -535,7 +535,7 @@ body {
 #footer {
     color: #b4b4b4;
     margin: 30px auto;
-    border-top: 1px solid #f0e5e5;
+    border-top: 1px solid #eee;
     padding: 10px 0 80px;
 }
 
@@ -620,8 +620,8 @@ body {
 
 .down-box .linux {
     width: 190px;
-    border-right: 1px solid #F0E5E5;
-    border-left: 1px solid #F0E5E5;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
 }
 
 .down-box .pl_item a.cover {
