@@ -14,7 +14,8 @@ title: Mini Résumé
 			"gender": "male",
 			"identification": "student",
 			"major programming": "HTML > CSS (incl. less) > JavaScript > C++",
-			"language": "zh_CN, en, ru"
+			"language": "zh_CN, en, ru",
+			"publication": "http://technom.me/assets/article-digital-danger-jingtaoliu-201301.pdf"
 		}
 	]
 }
