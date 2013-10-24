@@ -376,22 +376,22 @@ body {
 
 #main .blog-list .item {
     background: #fff;
-    padding: 10px 0px 0px 40px;
+    padding: 8px 11px 0px 40px;
     margin-top: 20px;
     width: 254px;
     border-right: 0px solid #eee;
 }
 
 #main .blog-list .i01 {
-    background: #fff url("images/item_ico01.png") 0px 0px no-repeat;
+    background: #fff url("images/blog-post-icon.png") 0px 0px no-repeat;
 }
 
 #main .blog-list .i02 {
-    background: #fff url("images/item_ico02.png") 0px 0px no-repeat;
+    background: #fff url("images/blog-post-icon.png") 0px 0px no-repeat;
 }
 
 #main .blog-list .i03 {
-    background: #fff url("images/item_ico03.png") 0px 0px no-repeat;
+    background: #fff url("images/blog-post-icon.png") 0px 0px no-repeat;
 }
 
 #main .blog-list .item:last-child {
@@ -400,10 +400,11 @@ body {
 }
 
 #main .blog-list h4 {
+    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 #main .date-wrap {
