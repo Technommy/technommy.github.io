@@ -11,8 +11,10 @@ links:
     url:          /about
   - name:         Resume
     url:          /resume
-  - name:         Visual Works
+  - name:         Works
     url:          /visual-works
+  - name:         Faved
+    url:          /favourite
   - name:         GitHub
     url:          http://github.com/technommy
     external:     true
