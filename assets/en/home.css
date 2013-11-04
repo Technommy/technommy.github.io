@@ -262,7 +262,7 @@ body {
 }
 
 #main .intro-content {
-    width: 679px;
+    width: intro;
     background: #fff;
     padding: 0px 20px 0px 0px;
     margin-top: 15px;
