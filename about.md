@@ -5,7 +5,7 @@ title: About Me
 
 ![ADConf 2013]({{ site.url }}/assets/me_at_adconf_2013.png)
 
-Hi there, I'm Tommy Jingtao-Liu (刘敬韬), global_id as technommy, born Aug 26 <a href="http://en.wikipedia.org/wiki/1995" target="_blank">1995</a> in <a href="http://en.wikipedia.org/wiki/Hunan" target="_blank">Hunan</a>, P.R.China. And I'm passioned about Musics (especially Ukulele play-along and Original Soundtrack) :-)
+Hi there, I'm Tommy Jingtao-Liu (刘敬韬), global_id as technommy, born Aug 26 <a href="http://en.wikipedia.org/wiki/1995" target="_blank">1995</a> in <a href="http://en.wikipedia.org/wiki/Hunan" target="_blank">Hunan</a>, P.R.China. And I'm passioned about <a href="soundcloud.com/technologier" target="_blank">Musics</a> (especially Ukulele play-along and Original Soundtracks) :-)
 
 I founded the <a href="http://2013.adc-cn.org/?page_id=44" target="_blank">Adolescent Developer Community</a> last year, now I'm an intern at <a href="http://sphinx.oupeng.com/" target="_blank">Opera Software China</a> during <a href="http://en.wikipedia.org/wiki/Gap_year" target="_blank">gap year</a> to University of California, Berkeley. 
 
