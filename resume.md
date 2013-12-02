@@ -3,7 +3,7 @@ layout: page
 title: Mini Résumé
 ---
 
-<a href="resume.json" target="_blank">Résumé</a> created with JSON, download the PDF version by clicking <a href="/assets/resume_20131104_updated.pdf" target="_blank">me</a>.
+Download PDF version by clicking <a href="/assets/resume_20131104_updated.pdf" target="_blank">here</a>.
 
 {% highlight json %}
 {
@@ -13,9 +13,8 @@ title: Mini Résumé
 			"en_name": "Tommy",
 			"gender": "male",
 			"identification": "student",
-			"major programming": "HTML > CSS (incl. less) > JavaScript > C++",
+			"programming": "HTML > CSS (incl. less) > JavaScript > C++",
 			"language": "zh_CN, en, ru",
-			"publication": "http://technom.me/assets/article-digital-danger-jingtaoliu-201301.pdf"
 		}
 	]
 }

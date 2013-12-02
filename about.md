@@ -3,12 +3,17 @@ layout: page
 title: About Me
 ---
 
-![ADConf 2013]({{ site.url }}/assets/me_at_adconf_2013.png)
+<!--![ADConf 2013]({{ site.url }}/assets/me_at_adconf_2013.png)-->
 
-Hi there, I'm Tommy Jingtao-Liu (刘敬韬), global_id as technommy, born Aug 26 <a href="http://en.wikipedia.org/wiki/1995" target="_blank">1995</a> in <a href="http://en.wikipedia.org/wiki/Hunan" target="_blank">Hunan</a>, P.R.China. And I'm passioned about <a href="https://soundcloud.com/technologier" target="_blank">Musics</a> (especially Ukulele play-along and Original Soundtracks) :-)
-
-I founded the <a href="http://2013.adc-cn.org/?page_id=44" target="_blank">Adolescent Developer Community</a> last year, now I'm an intern at <a href="http://sphinx.oupeng.com/" target="_blank">Opera Software China</a> during <a href="http://en.wikipedia.org/wiki/Gap_year" target="_blank">gap year</a> to University of California, Berkeley. 
+<p>
+	I’m Tommy Jingtao-Liu (刘敬韬), global identifier as technommy, born Aug 26 1995 in Hunan, P.R.China. This is my website and online portfolio created with Weebly. 
+</p>
+<p>
+	As an ambitious teenager, I'm really curious about everything like other young boy. Actually, there are two type of things I'm passioned about, one is programming, which I've contributed some codes and specs translation in few open source project and web standards. And the other is visual arts, well, I'm now mainly working on graphic designing like Typography and User Interface, you can find some of my work in this website :-) Also, as an community activist, I founded the Adolescent Developer Community last year, now I’m an intern at Opera Software China during my gap year to college.
+</p>
 
 <a href="mailto:technologier@gmail.com" target="_blank" class="big-button blue">EMAIL ME :-)</a>
 
-<p style="color: #7f8c8d; font-size: 10px;">//Much appreciated to [/muan](https://github.com/muan) for created such fabulous theme on Jekyll.</p>
+<!--
+	Tribution! Much appreciated to [/muan](https://github.com/muan) for created such fabulous theme on Jekyll.
+-->
