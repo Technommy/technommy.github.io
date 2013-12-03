@@ -107,9 +107,7 @@
 		{
 			"title": "Black belt of Taekwondo",
 			"from": "Shenzhen Taekwondo Association",
-			"certification": [
-				"photo_copy": "<url>"
-			]
+			"certification": "photo copy <url>"
 		}
 	],
 	"languages": [
