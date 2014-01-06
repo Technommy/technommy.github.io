@@ -492,7 +492,7 @@ var tetris = {
 			} else if (e.target.id.substring(0, 6) === "replay") {
 				replay.id = "pause_in_the_middle";
 				replay_from_pause.id = "pause";
-				pause.src = "file:///android_asset/preinstall/error_page_game_pause_black.png";
+				pause.src = "file:///android_asset/preinstall/error_page_game_pause.png";
 				tetris.init();
 			} else if (e.target.id.substring(0, 5) === "start") {
 				if (!history.pushState) {
@@ -621,14 +621,14 @@ var tetris = {
 		},
 		togglePause:function() {
 			if (this.isActive === 1) {
-				pause.src = "file:///android_asset/preinstall/error_page_game_play_black.png";
+				pause.src = "file:///android_asset/preinstall/error_page_game_play.png";
 				Array.prototype.slice.call(document.querySelectorAll('.gameover_or_pause')).forEach(function(item) {
 					item.style.visibility = "visible";
 				});
 				this.clearTimers();
 				this.isActive = 0;
 			} else {
-				pause.src = "file:///android_asset/preinstall/error_page_game_pause_black.png";
+				pause.src = "file:///android_asset/preinstall/error_page_game_pause.png";
 				Array.prototype.slice.call(document.querySelectorAll('.gameover_or_pause')).forEach(function(item) {
 					item.style.visibility = "";
 				});
@@ -899,7 +899,7 @@ var tetris = {
 					item.style.visibility = "visible";
 				});
 			}
-			pause.src = "file:///android_asset/preinstall/error_page_game_play_black.png";
+			pause.src = "file:///android_asset/preinstall/error_page_game_play.png";
 
 			var nodes = this.canvas.childNodes;
 			this.sqs = []; this.curSqs = [];
