@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>出错啦！</title>
+<head>
+<!-- Only use this function when *needed* in nightly mode -->
+<!--<script type="text/javascript">
+	/*window.__opera_toggleNightMode=function(){
+		var $ = document;
+		var nightId = 'nightmode';
+		if (!$.getElementById(nightId)) {
+			var head  = $.getElementsByTagName('head')[0];
+    		var link  = $.createElement('link');
+    		link.id   = nightId;
+    		link.rel  = 'stylesheet';
+    		link.type = 'text/css';
+    		link.href = 'night.css'; /*not define if this function is not used in file*/
+    		link.media = 'all';
+    		head.appendChild(link);
+		}
+	}
+</script>-->
+<script type="text/javascript">
+</script>
+</head>
+<style type="text/css">
+#main { height: 100%; text-align: center; overflow: hidden;} /* Without this, html { height: 100%} + img { margin-top: x; } overflows the viewport (WebKit bug). */
+#start { border: 1px solid #a0a0a0; border-radius: 2px; }
+#main > p { display: inline-block; margin: 0 1.8%; border-radius: 4px; font-size: 1.1em; color: #444; padding: 3% 15.8%; line-height: 1.5em; }
+  .btn { background: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#f1f1f1)); border:1px solid #b1b1b1; }
+  .btn:active { background: -webkit-gradient(linear, 0 0, 0 100%, from(#dedede), to(#d1d1d1)); border:1px solid #b2b2b2;}
+#start > img { display: block; width: 100%; height: 100%;}
+#start > section { margin: auto; width: 100%; height: 15.4%; text-align: center; position: absolute; top: 0; bottom: 0; font-size: 18px; line-height: 0}
+#start > section > img { height: 100%; margin-right: 4.1%; vertical-align: middle }
+#start > section > span { display: inline-block; vertical-align: middle; color: black !important; }
+#icon { height:0.7em; }
+ul { display: inline-block; text-align: start; vertical-align: top; margin: 0; padding-left: 0; width: 50%; }
+section > section { margin-bottom: 11.9%; }
+li { margin-bottom: 7.2%; list-style: none; }
+li:last-child { margin-bottom: 0 }
+li > span { color: #ff0000; margin-right: 0.5em; margin-left: 0.5em }
+@media (orientation: portrait) {
+#start { display: block; width: 90.5%; height: 31.0%; margin: 6.7% auto 0; position: relative } 
+h1 { font-size: 1.6em; margin: 10% 0 9.2%; padding-left: 5%; font-weight: normal; }
+#scrollBox { font-size: 1.1em; color: #444; padding: 0 4% 0 2%; line-height: 1.5em; }
+}
+@media (orientation: landscape) {
+#start { width: 50.5%; height: 56.2%; height: 53.2%; margin: 3.5% 0 0 2.5%; position: absolute; margin-top: 22.4px; /* seems to be a bug that the above percentage doesn't work well */}
+h1 { font-size: 2em; margin: 7.5% 0 4.4% 53.9%; //padding: 10% 0 0 40%; // margin: 0; font-weight: normal; margin-top: 4.5%; margin-bottom: 2.4%; }
+section > section { margin: 0 0 6.9% 53.9%; margin-bottom: 3.9%}
+#main > p { font-size: 1.2em; color: #444; line-height: 1.5em; padding: 2.3% 20.7%; margin: 0 0.9%}
+#scrollBox { font-size: 1.2em; color: #444; line-height: 1.5em; padding-left: 40%; margin-top:12%;}
+}
+</style>
+</head>
+<body>
+<style>
+  html, body, #tetris_panel, #tetris { height: 100%; white-space: nowrap}
+  body {overflow:hidden; //background: #d7d7d7; margin: 0}
+  #info, #canvas { margin: auto; }
+  #tetris { overflow: hidden;}
+  #canvas {
+    // width: 55.5555%;
+    // height: 396px;
+    // background-color: #000;
+    height: 73.5%;
+    position: relative;
+    color: #fff;
+  }
+  #canvas h1 {margin: 0; padding: 0; text-align: center; font-size: 30px; padding-top: 200px;}
+
+  .diffc {
+    color:#222;
+  }
+  .piece {
+    border: 1px solid white;
+    position: absolute;
+  }
+  .square {
+    position: absolute;
+    //width: 18px;
+    //height: 18px;
+    border: 1px solid #222;
+    border-radius: 2px;
+  }
+  .decoration {
+    display: inline-block;
+    border-left: 1px dotted #e5e5e5;
+    height: 100% !important;
+    vertical-align: top;
+  }
+  .decoration:nth-child(2) {
+    border-left: none;
+  }
+
+	/* make thes selectivity higher than nightmode's */
+  .type0:empty {background-color: #ffad2b !important;}
+  .type1:empty {background-color: #f6acff !important;}
+  .type2:empty {background-color: #40d0ff !important;}
+  .type3:empty {background-color: #cae611 !important;}
+  .type4:empty {background-color: #fc7881 !important;}
+  .type5:empty {background-color: #b9eff9 !important;}
+  .type6:empty {background-color: #fafafa !important;}
+
+  #next_shape {position: relative; //background-color: #000; //border: 1px solid #d40000;//width: 110px; height: 50px; left: -10%; top: -20px; -webkit-transform: scale(0.7); transform: scale(0.7);}
+  #level_panel { width: 25%; box-sizing: border-box; }
+  #score_panel { padding-left: 5%;width: 25%; box-sizing: border-box; }
+  #panel { width: 50%; box-sizing: border-box; } div > img { border: 7px solid transparent !important; width: 33.33%; box-sizing: border-box; }
+  #info .normal {background-color: #efefef !important; //float: right; //width: 30.5555%; height: 26.5%; padding: 4% 0; box-sizing: border-box; border-top: 1px solid #969696 !important; top}
+  /*#info .nightly {background-color: #444 !important; //float: right; //width: 30.5555%; height: 26.5%; padding: 4% 0; box-sizing: border-box; border-top: 1px solid #969696 !important; top}*/
+	#level, #score { color: #727272 !important; }
+  div > p { display: inline-block; margin: 0.5em; }
+  #info > section { display: inline-block; vertical-align: top; border-top:1px solid #ccc;}
+  #panel { text-align: right; }
+  #level { text-align: center; }
+  p > span { display: block; color: #fe5310 !important; font-size: 150%; margin-top: 0.5em; font-family: sans-serif; }
+  #score > span { font-size: 200%; }
+  [hidden] { display: none !important; }
+  
+  .gameover_or_pause { visibility: hidden; }
+  div.gameover_or_pause:empty { position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.3) !important; top: 0; pointer-events: none;}
+  img.gameover_or_pause { width: 68px; height: 68px; position: absolute; z-index: 1; top: 0; bottom: 0; left: 0; right: 0; margin: auto; }
+</style>
+<section id="main">
+<!-- <img id='start' alt="点击玩游戏" src="file:///android_asset/preinstall/click_to_play.png"> -->
+<section id='start'><img id='start_image' alt="点击玩游戏" src="file:///android_asset/preinstall/error_page_game_sample.png"><section id='start_absolute'><img id="start_icon" src="file:///android_asset/preinstall/error_page_game_play_black.png" /><span id='start_text'>点击就能玩游戏</span></section></section>
+<h1 class="diffc">咦，好像出错了！</h1>
+<section class="diffc">可能原因：<ul><li><span>*</span>网路不稳定</li><li><span>*</span>尚未接入互联网</li><li><span>*</span>输入的网址不正确</li><!--<li>安全软件禁止访问网如</li>--></section>
+<div id="scrollBox">
+</div>
+<p class="btn" id="reflesh">刷新</p>
+<p class="btn" id="back">返回</p>
+</section>
+
+<section id="tetris_panel" hidden>
+<div id="tetris">
+<!-- <div id="board" style="float: right; border: 1px solid black;">Board<br /></div> -->
+  <div id="canvas"><img class="gameover_or_pause" src="file:///android_asset/preinstall/error_page_game_play.png" alt="再玩一次" id="pause_in_the_middle" /></div>
+  <div id="info">
+    <section id="level_panel">
+    <div id="next_shape">asdfasdf</div>
+    <p id="level">级别：<span></span></p>
+    </section><!--
+
+    --><p hidden id="lines">Lines: <span></span></p><!--
+    --><p hidden id="time">Time: <span></span></p><!--
+
+    --><section id="panel">
+    <div><!--
+   --><img src="file:///android_asset/preinstall/error_page_game_left.png" alt="向左" id="left" /><!--
+   --><img src="file:///android_asset/preinstall/error_page_game_rotate.png" alt="旋转" id="up" /><!--
+   --><img src="file:///android_asset/preinstall/error_page_game_right.png" alt="向右" id="right" /><!--
+ --></div>
+    <div><!--
+   --><img src="file:///android_asset/preinstall/error_page_game_down.png" alt="加速" id="down" /><!--
+   --><img src="file:///android_asset/preinstall/error_page_game_pause.png" alt="暂定" id="pause" /><!--
+ --></div>
+    </section><!--
+
+    --><section id="score_panel"><p id="score">得分：<span></span></p></section>
+
+  </div>
+  <div class="gameover_or_pause"></div>
+</div>
+</section>
+<script language="javascript">
+//Array.prototype.slice.call(document.querySelectorAll('img')).forEach(function(img) {
+// 	img.src = img.src.split('/')[5];
+// });
+
+var start;
+var scrollbox = document.getElementById("scrollBox");
+var image = document.getElementById("img");
+scrollbox.ontouchstart = function (e) {
+    start = Date.now();
+    e.preventDefault();
+    e.stopPropagation();
+};
+
+scrollbox.ontouchend = function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // FIXME:
+    // There's not a simple way to disable longclick meanwhile enable click for a-link
+    if (Date.now() - start < 500) {
+        var link = document.getElementById('link_to_click'),
+        event = document.createEvent('HTMLEvents');
+        event.initEvent('click', true, true);
+        link.dispatchEvent(event);
+    }
+};
+
+__errorpagelink={
+  //links : [###links###],
+  index : 0,
+  timer : null,
+  clock : function () {
+    __errorpagelink.index = (__errorpagelink.index + 1) % __errorpagelink.links.length;
+    document.getElementById("scrollBox").innerHTML=__errorpagelink.links[__errorpagelink.index];
+  },
+  start : function () {
+    //this.index=Math.floor(Math.random()*this.links.length);
+    //if (this.links.length > 0) {
+      //document.getElementById("scrollBox").innerHTML=this.links[this.index];
+      //timer=self.setInterval(this.clock,###interval###);
+    //}
+  },
+};
+__errorpagelink.start();
+
+</script>
+<script>
+// Don't let the user play the game when history.pushState is not available.
+if (!history.pushState) {
+		start_image.src = "file:///android_asset/preinstall/cat.png";
+		start_absolute.style.display = "none";
+		start_text.style.display = "none";
+}
+
+var NUM_OF_COLUMNS = 15;
+var tetris = {
+		board:null,
+		boardDiv:null,
+		canvas:null,
+		pSize:20,
+		canvasHeight:440,
+		canvasWidth:200,
+		boardHeight:0,
+		boardWidth:0,
+		spawnX:4,
+		spawnY:1,
+		shapes:[
+			[
+				[-1,1],[0,1],[1,1],[0,0] //TEE
+			],
+			[
+				[-1,0],[0,0],[1,0],[2,0] //line
+			],
+			[
+				[-1,-1],[-1,0],[0,0],[1,0] //L EL
+			],
+			[
+				[1,-1],[-1,0],[0,0],[1,0] //R EL
+			],
+			[
+				[0,-1],[1,-1],[-1,0],[0,0] //R ess
+			],
+			[
+				[-1,-1],[0,-1],[0,0],[1,0] // L ess
+			],
+			[
+				[0,-1],[1,-1],[0,0],[1,0] // square
+			]
+		],
+		tempShapes:null,
+		curShape:null,
+		curShapeIndex:null,
+		curX:0,
+		curY:0,
+		curSqs:[],
+		nextShape:null,
+		nextShapeDisplay:null,
+		nextShapeIndex:null,
+		sqs:null,
+		score:0,
+		scoreDisplay:null,
+		level:1,
+		levelDisplay:null,
+		numLevels:10,
+		time:0,
+		maxTime:1000,
+		timeDisplay:null,
+		isActive:0, // false if paused()
+		isStarted:0, // true if init() is called
+		isPausedByKey:false, // true if the paused key is pressed or gameover. We
+		                     // don't call togglePause() on back/forward in these
+		                     // cases.
+		willRestore:0, // whether tetirs.restore() will be called when "start" is
+		               // clicked.
+		curComplete:false, // true if the bottom of the current piece touches something else 
+		timer:null,
+		sTimer:null,
+		speed:700,
+		lines:0,
+    
+		init:function() {
+			this.isStarted = true;
+			Array.prototype.slice.call(document.querySelectorAll('.gameover_or_pause')).forEach(function(item) {
+				item.style.visibility = "";
+			});
+			this.initBoard();
+			this.initInfo();
+			this.initShapes();
+			//this.bindEvents();
+			this.play();
+		},
+		initBoard:function() {
+			var canvasComputedStyle = window.getComputedStyle(this.canvas);
+			this.pSize = Math.floor(parseFloat(canvasComputedStyle.width) / NUM_OF_COLUMNS);
+			var height = Math.floor(parseFloat(canvasComputedStyle.height) / this.pSize) * this.pSize;
+			document.querySelector('style').textContent += ".square { width: " + (this.pSize - 2) + "px;" +
+			                                                         "height: " + (this.pSize - 2) + "px; }" +
+			                                               ".decoration { width: " + (this.pSize - 1) + "px; }";
+			this.canvas.style.width = this.pSize * NUM_OF_COLUMNS + "px";
+			this.canvas.style.height = height + "px";
+			//this.canvas.style.height = this.pSize * 22 + "px";
+			document.getElementById("info").style.height = (window.innerHeight) - height + "px";
+			// document.getElementById("info").style.width = this.pSize * 17 + "px";
+			this.boardHeight = height / this.pSize;
+			this.boardWidth = NUM_OF_COLUMNS;
+			
+			this.board = []; this.sqs = [];
+			var nodes = this.canvas.childNodes;
+			// Remove everything but the replay button and the dashed lines;
+			for (var i = nodes.length - 1; i > NUM_OF_COLUMNS; --i)
+				this.canvas.removeChild(nodes[i]);
+			var s = this.boardHeight * this.boardWidth;
+			for (var i=0;i<s;i++) {
+				this.board.push(0);
+			}
+			//this.boardDiv = document.getElementById('board'); // for debugging
+		},
+		initInfo:function() {
+			this.nextShapeDisplay = document.getElementById("next_shape");
+			this.levelDisplay = document.getElementById("level").getElementsByTagName("span")[0];
+			this.timeDisplay = document.getElementById("time").getElementsByTagName("span")[0];
+			this.scoreDisplay = document.getElementById("score").getElementsByTagName("span")[0];
+			this.linesDisplay = document.getElementById("lines").getElementsByTagName("span")[0];
+			this.time = 0;
+			this.score = 0;
+			this.level = 1;
+			this.lines = 0;
+			this.setInfo('time');
+			this.setInfo('score');
+			this.setInfo('level');
+			this.setInfo('lines');
+		},
+		initShapes:function() {
+			this.curSqs = [];
+			this.curComplete = false;
+			this.shiftTempShapes();
+			this.curShapeIndex = this.tempShapes[0];
+			this.curShape = this.shapes[this.curShapeIndex];
+			this.initNextShape();
+			this.setCurCoords(this.spawnX,this.spawnY);
+			this.drawShape(this.curX,this.curY,this.curShape);
+		},
+		initNextShape:function() {
+			if (typeof this.tempShapes[1] === 'undefined') {this.initTempShapes();}
+			try {
+				this.nextShapeIndex = this.tempShapes[1];
+				this.nextShape = this.shapes[this.nextShapeIndex];
+				this.drawNextShape();
+			} catch(e) {
+				throw new Error("Could not create next shape. " + e);
+			}
+		},
+		initTempShapes:function() {
+			this.tempShapes = [];
+			for (var i = 0;i<this.shapes.length;i++) {
+				this.tempShapes.push(i);
+			}
+			var k = this.tempShapes.length;
+			while ( --k ) { //Fisher Yates Shuffle
+				var j = Math.floor( Math.random() * ( k + 1 ) );
+				var tempk = this.tempShapes[k];
+				var tempj = this.tempShapes[j];
+				this.tempShapes[k] = tempj;
+				this.tempShapes[j] = tempk;
+			}
+		},
+		shiftTempShapes:function() {
+			try {
+				if (typeof this.tempShapes === 'undefined' || this.tempShapes === null) {
+					this.initTempShapes();
+				} else {
+					this.tempShapes.shift();
+				}
+			} catch(e) {
+				throw new Error("Could not shift or init tempShapes:  " + e);
+			}
+		},
+		initTimer:function() {
+				var me = this;
+				var tLoop = function() {
+					me.incTime();
+					me.timer = setTimeout(tLoop,30);
+				};
+				this.timer = setTimeout(tLoop,30);
+		},
+		initLevelScores:function() {
+			var c = 1;
+			for (var i=1;i<=this.numLevels;i++) {
+				this['level' + i] = [c * 1000,40*i,5*i]; // for next level, row score, p score, TODO: speed
+				c = c + c;
+			}
+		},
+		setInfo:function(el) {
+			this[el + 'Display'].innerHTML = this[el];
+		},
+		drawNextShape:function() {
+				var ns = [];
+				for (var i=0;i<this.nextShape.length;i++) {
+					ns[i] = this.createSquare(this.nextShape[i][0] + 2,this.nextShape[i][1] + 2,this.nextShapeIndex);
+				}
+				this.nextShapeDisplay.innerHTML = '';
+				for (var k=0;k<ns.length;k++) {
+					this.nextShapeDisplay.appendChild(ns[k]);
+				}
+		},
+		drawShape:function(x,y,p) {
+			for (var i=0;i<p.length;i++) {
+				var newX = p[i][0] + x;
+				var newY = p[i][1] + y;
+				this.curSqs[i] = this.createSquare(newX,newY,this.curShapeIndex);
+			}
+			for (var k=0;k<this.curSqs.length;k++) {
+				this.canvas.appendChild(this.curSqs[k]);
+			}
+		},
+		createSquare:function(x,y,type) {
+			var el = document.createElement('div');
+			el.className = 'square type'+type;
+			el.style.left = x * this.pSize + 'px';
+			el.style.top = y * this.pSize + 'px';
+			return el;
+		},
+		removeCur:function() {
+			var me = this;
+			this.curSqs.eachdo(function() {
+				me.canvas.removeChild(this);
+			});
+			this.curSqs = [];
+		},
+		setCurCoords:function(x,y) {
+			this.curX = x;
+			this.curY = y;
+		},
+		bindEvents:function() {
+			var me = this;
+			var event = "keypress";
+			if (this.isSafari() || this.isIE()) {event = "keydown";}
+			var cb = function(e) {
+				me.handleEvent(e, this);
+			};
+			if (window.addEventListener) {
+				//document.addEventListener(event, cb, false);
+
+				document.addEventListener("touchstart", cb, false);
+				document.addEventListener("touchend", cb, false);
+				//document.addEventListener("mousedown", cb, false);
+				//document.addEventListener("mouseup", cb, false);
+				//document.addEventListener("keydown", cb, false);
+				//document.addEventListener("keyup", cb, false);
+			} else {
+				document.attachEvent('on' + event,cb);
+			}
+		},
+		handleEvent:function(e) {
+			e.preventDefault();
+			if (this.lastEvent != e)
+				this.lastTouchTime = Date.now();
+			if (e.type === "touchend" || e.type === "mouseup" ||
+					e.type === "keyup" ) {
+				this.lastEvent = null;
+				return;
+			} else {
+				this.lastEvent = e;
+			}
+
+			var c = this.whichKey(e);
+			var dir = '';
+			//switch (c) {
+			if ((c === 37 || e.target.id === "left") && this.isActive) {
+				this.move('L');
+			} else if ((c === 38 || e.target.id === "up") && this.isActive) {
+				this.move('RT');
+			} else if ((c === 39 || e.target.id === "right") && this.isActive) {
+				this.move('R');
+			} else if ((c === 40 || e.target.id === "down") && this.isActive) {
+				this.move('D');
+			} else if (c === 27 || e.target.id.substring(0, 5) === "pause") {
+				if (this.isActive) {
+					this.isPausedByKey = true;
+				} else {
+					this.isPausedByKey = false;
+				}
+				this.togglePause();
+			} else if (e.target.id.substring(0, 6) === "replay") {
+				replay.id = "pause_in_the_middle";
+				replay_from_pause.id = "pause";
+				pause.src = "file:///android_asset/preinstall/error_page_game_pause_black.png";
+				tetris.init();
+			} else if (e.target.id.substring(0, 5) === "start") {
+				if (!history.pushState) {
+					return;
+				}
+				if (OperaCallback.lockOrientation()) {
+					var self = this;
+					setTimeout(function(){self.handleEvent(e)}, 200);
+					return;
+				}
+				window.locked = true;
+				//window.location.href = "#tetris";
+
+				if (this.willRestore) {
+					// We try restore here too instead of only letting "popstate" handler
+					// do it because history.forward() might fail (when the browser
+					// doesn't support history.state and the game scene is reloaded).
+					tetris.willRestore = false;
+					tetris.restore();
+					history.forward();
+				} else if (!this.isStarted) {
+					//document.getElementById('start').src = "file:///android_asset/preinstall/click_to_continue.png";
+					start_icon.src =
+						"file:///android_asset/preinstall/error_page_game_pause_black.png";
+					var pauseOrReplay = window.pause || window.replay_from_pause;
+					pauseOrReplay.src = "file:///android_asset/preinstall/error_page_game_pause_black.png";
+					pauseOrReplay.id = "pause";
+					var replayOrPauseInTheMiddle = window.replay || window.pause_in_the_middle;
+					replayOrPauseInTheMiddle.id = "pause_in_the_middle";
+					start_icon.nextSibling.textContent = "点击继续玩游戏";
+					// TODO (kanghaol) We should avoid history.pushState and use
+					//                 history.forward whenever possible so that history
+					//                 entries after the game scene is not overridden.
+					history.pushState({}, "俄罗斯方块");
+					window.main.hidden = true;
+					window.tetris_panel.hidden = false;
+					tetris.init();
+				} else {
+					history.forward();
+				}
+			} else if (e.target.id === "reflesh") {
+				location.reload();
+			} else if (e.target.id === "back") {
+				history.back();
+			}
+		},
+		whichKey:function(e) {
+			var c;
+			if (window.event) {c = window.event.keyCode;}
+			else if (e) {c = e.keyCode;}
+			return c;
+		},
+		incTime:function() {
+			if (this.lastEvent && Date.now() - this.lastTouchTime > 500)
+				this.handleEvent(this.lastEvent);
+			// this.time++;
+			// this.setInfo('time');
+		},
+		incScore:function(amount) {
+			this.score = this.score + amount;
+			this.setInfo('score');
+		},
+		incLevel:function() {
+			this.level++;
+			this.speed = this.speed - 75;
+			this.setInfo('level');
+		},
+		incLines:function(num) {
+			this.lines += num;
+			this.setInfo('lines');
+		},
+		calcScore:function(args) {
+			var lines = args.lines || 0;
+			var shape = args.shape || false;
+			var speed = args.speed || 0;
+			var score = 0;
+			
+			if (lines > 0) {
+				score += lines*this["level" + this.level][1]; 
+				this.incLines(lines);
+			}
+			if (shape === true) {score += shape*this["level"+this.level][2];}
+			// if (speed > 0) {score += speed*this["level"+this.level[3]];} TODO: implement speed score
+			this.incScore(score);
+		},
+		checkScore:function() {
+			if (this.level < 10 && this.score >= this['level' + this.level][0]) {
+				this.incLevel();
+			}
+		},
+		gameOver:function() {
+			this.isStarted = false;
+			localStorage['oupeng_game_level'] = "";
+			this.togglePause();
+			// this.canvas.innerHTML = "<h1>GAME OVER</h1>";
+			pause_in_the_middle.id = "replay";
+			pause.id = "replay_from_pause";
+			start_icon.src =
+				"file:///android_asset/preinstall/error_page_game_play_black.png";
+			start_icon.nextSibling.textContent = "点击就能玩游戏";
+		},
+		play:function() { //gameLoop
+			var me = this;
+			if (this.timer === null) {
+				this.initTimer();
+			}
+			var gameLoop = function() {
+				var playNext = me.move('D');
+				if(me.curComplete) {
+					me.markBoardShape(me.curX,me.curY,me.curShape);
+					me.curSqs.eachdo(function() {
+						me.sqs.push(this);
+					});
+					me.calcScore({shape:true});
+					me.checkRows();
+					me.checkScore();
+					me.initShapes();
+					me.play();
+				} else if (playNext) {
+					me.pTimer = setTimeout(gameLoop,me.speed);
+				}
+				me.save();
+			};
+			this.pTimer = setTimeout(gameLoop,me.speed);
+			this.isActive = 1;
+		},
+		togglePause:function() {
+			if (this.isActive === 1) {
+				pause.src = "file:///android_asset/preinstall/error_page_game_play_black.png";
+				Array.prototype.slice.call(document.querySelectorAll('.gameover_or_pause')).forEach(function(item) {
+					item.style.visibility = "visible";
+				});
+				this.clearTimers();
+				this.isActive = 0;
+			} else {
+				pause.src = "file:///android_asset/preinstall/error_page_game_pause_black.png";
+				Array.prototype.slice.call(document.querySelectorAll('.gameover_or_pause')).forEach(function(item) {
+					item.style.visibility = "";
+				});
+				this.play();
+			}
+		},
+		clearTimers:function() {
+			clearTimeout(this.timer);
+			clearTimeout(this.pTimer);
+			this.timer = null;
+			this.pTimer = null;
+		},
+		move:function(dir) {
+			var s = '';
+			var me = this;
+			var tempX = this.curX;
+			var tempY = this.curY;
+			switch(dir) {
+				case 'L':
+					s = 'left';
+					tempX -= 1;
+					break;
+				case 'R':
+					s = 'left';
+					tempX += 1;
+					break;
+				case 'D':
+					s = 'top';
+					tempY += 1;
+					break;
+				case 'RT':
+					this.rotate();
+					return true;
+					break;
+				default:
+					throw new Error('wtf');
+					break;       
+			}
+			if (this.checkMove(tempX,tempY,this.curShape)) {
+				this.curSqs.eachdo(function(i) {
+					var l = parseInt(this.style[s],10);
+					dir === 'L' ? l-=me.pSize:l+=me.pSize;
+					this.style[s] = l + 'px';
+				});
+				this.curX = tempX;
+				this.curY = tempY;
+			} else if (dir === 'D') { //if move is invalid and down, piece must be complete
+				if (this.curY === 1 || this.time === this.maxTime) {this.gameOver(); return false;}
+				this.curComplete = true;
+			}
+			return true;
+		},
+		rotate:function() {
+			if (this.curShapeIndex !== 6) { // if not the square
+				var temp = [];
+				this.curShape.eachdo(function() {
+					temp.push([this[1] * -1,this[0]]); // (-y,x)
+				});
+				if (this.checkMove(this.curX,this.curY,temp)) {
+					this.curShape = temp;
+					this.removeCur();
+					this.drawShape(this.curX,this.curY,this.curShape);
+				} else { throw new Error("Could not rotate!");}
+			}
+		},
+		checkMove:function(x,y,p) {
+			if (this.isOB(x,y,p) || this.isCollision(x,y,p)) {return false;}
+			return true;
+		},
+		isCollision:function(x,y,p) {
+			var me = this;
+			var bool = false;
+			p.eachdo(function() {
+				var newX = this[0] + x;
+				var newY = this[1] + y;
+				if (me.boardPos(newX,newY) === 1) {bool = true;}
+			});
+			return bool;
+		},
+		isOB:function(x,y,p) { 
+			var w = this.boardWidth - 1;
+			var h = this.boardHeight - 1;
+			var bool = false;
+			p.eachdo(function() {
+				var newX = this[0] + x;
+				var newY = this[1] + y;
+				if(newX < 0 || newX > w || newY < 0 || newY > h) {bool = true;}
+			});
+			return bool;
+		},
+		getRowState:function(y) { //Empty, Full, or Used
+			var c = 0;
+			for (var x=0;x<this.boardWidth;x++) {
+				if (this.boardPos(x,y) === 1) {c = c + 1;}
+			}
+			if (c === 0) {return 'E';}
+			if (c === this.boardWidth) {return 'F';}
+			return 'U';
+		},
+		checkRows:function() { //does check for full lines, removes them, and shifts everything else down
+			/*var me = this;
+			var memo = 0;
+			var checks = (function() {
+					me.curShape.eachdo(function() {
+						if ((this[1] + me.curY) > memo) {
+							return this[1];
+						}
+					});										
+			})();
+			
+			console.log(checks);*/
+			
+			
+			var me = this;
+			var start = this.boardHeight;
+			this.curShape.eachdo(function() {
+				var n = this[1] + me.curY;
+				console.log(n);
+				if (n < start) {start = n;}
+			});
+			console.log(start);
+
+			
+
+			var c = 0;
+			var stopCheck = false;
+			for (var y=this.boardHeight - 1;y>=0;y--) {
+					switch(this.getRowState(y)) {
+						case 'F':
+							this.removeRow(y);
+							c++;
+							break;
+						case 'E':
+							if (c === 0) {	
+								stopCheck = true;
+							}
+							break;
+						case 'U':
+							if (c > 0) {
+								this.shiftRow(y,c);
+							}
+							break;
+						default:
+							break;
+					}
+					if (stopCheck === true) {
+						break;
+					}
+			}
+			if (c > 0) {
+				this.calcScore({lines:c});
+			}
+		},
+		shiftRow:function(y,amount) {
+			var me = this;
+			for (var x=0;x<this.boardWidth;x++) {
+				this.sqs.eachdo(function() {
+					if (me.isAt(x,y,this)) {
+						me.setBlock(x,y+amount,this);
+					}
+				});
+			}
+			me.emptyBoardRow(y);
+		},
+		emptyBoardRow:function(y) { // empties a row in the board array
+			for (var x=0;x<this.boardWidth;x++) {
+				this.markBoardAt(x,y,0);
+			}
+		},
+		removeRow:function(y) {
+			for (var x=0;x<this.boardWidth;x++) {
+				this.removeBlock(x,y);
+			}
+		},
+		removeBlock:function(x,y) {
+			var me = this;
+			this.markBoardAt(x,y,0);
+			this.sqs.eachdo(function(i) {
+				if (me.getPos(this)[0] === x && me.getPos(this)[1] === y) {
+					me.canvas.removeChild(this);
+					me.sqs.splice(i,1);
+				}
+			});
+		},
+		setBlock:function(x,y,block) {
+			this.markBoardAt(x,y,1);
+			var newX = x * this.pSize;
+			var newY = y * this.pSize;
+			block.style.left = newX + 'px';
+			block.style.top = newY + 'px';
+		},
+		isAt:function(x,y,block) { // is given block at x,y?
+			if(this.getPos(block)[0] === x && this.getPos(block)[1] === y) {return true;}
+			return false;
+		},
+		getPos:function(block) { // returns [x,y] block position
+			var p = [];
+			p.push(parseInt(block.style.left,10)/this.pSize);
+			p.push(parseInt(block.style.top,10)/this.pSize);
+			return p;
+		},
+		getBoardIdx:function(x,y) { // returns board array index for x,y coords
+			return x + (y*this.boardWidth);
+		},
+		boardPos:function(x,y) { // returns value at this board position
+			return this.board[x+(y*this.boardWidth)];
+		},
+		markBoardAt:function(x,y,val) {
+			this.board[this.getBoardIdx(x,y)] = val;
+		},
+		markBoardShape:function(x,y,p) {
+			var me = this;
+			p.eachdo(function(i) {
+				var newX = p[i][0] + x;
+				var newY = p[i][1] + y;
+				me.markBoardAt(newX,newY,1);
+			});
+		},
+		isIE:function() {
+			return this.bTest(/IE/);
+		},
+		isFirefox:function() {
+			return this.bTest(/Firefox/);
+		},
+		isSafari:function() {
+			return this.bTest(/Safari/);
+		},
+		bTest:function(rgx) {
+			return rgx.test(navigator.userAgent);
+		},
+		/*debug:function() {
+			var me = this;
+			var str = '';
+			for (var i=0;i<me.board.length;i++) {
+				if(i%me.boardWidth === 0) {str += "<br />"}
+				if(me.board[i] === 1) {str += ' X ';}
+				else {str += "&nbsp;*&nbsp;";}
+			}
+			var par = document.createElement('p');
+			par.innerHTML = str;
+			me.boardDiv.innerHTML = '';
+			me.boardDiv.appendChild(par);
+		},*/
+		save:function() {
+			localStorage['oupeng_game_board'] = this.canvas.innerHTML;
+			localStorage['oupeng_game_curX'] = this.curX;
+			localStorage['oupeng_game_curY'] = this.curY;
+			localStorage['oupeng_game_tempShapes'] = JSON.stringify(this.tempShapes);
+			localStorage['oupeng_game_curShape'] = JSON.stringify(this.curShape);
+			localStorage['oupeng_game_score'] = this.score;
+			localStorage['oupeng_game_level'] = this.level;
+		},
+		// Note that we do not save the "paused" state.
+		// TODO (kanghaol) When the user reloads during the gameover scene, it gets
+		//                 turned into a new 404 page. This could be fixed by
+		//                 cleaning the history only after the user presses back.
+		restore:function() {
+			window.tetris_panel.hidden = false;
+			window.main.hidden = true;
+			this.initBoard(); // TODO (kanghaol) What if this initializes a different
+												// this.boardHeight
+
+			this.canvas.innerHTML = localStorage['oupeng_game_board'];
+			// We show the pause scene when history.state is not supported because we
+			// know that history.forward() would sometimes fail.
+			if (!('state' in history)) {
+				Array.prototype.slice.call(document.querySelectorAll('.gameover_or_pause')).forEach(function(item) {
+					item.style.visibility = "visible";
+				});
+			}
+			pause.src = "file:///android_asset/preinstall/error_page_game_play_black.png";
+
+			var nodes = this.canvas.childNodes;
+			this.sqs = []; this.curSqs = [];
+			for (var i = 0; i < nodes.length - 4; ++i) {
+				this.sqs.push(nodes[i]);
+				var pos = this.getPos(nodes[i]);
+				this.markBoardAt(pos[0],pos[1],1);
+			}
+			for (; i < nodes.length; ++i) {
+				this.curSqs.push(nodes[i]);
+			}
+			this.curShapeIndex = parseInt(nodes[i-1].className[11]);
+			this.curShape = JSON.parse(localStorage['oupeng_game_curShape']);
+			this.curX = parseInt(localStorage['oupeng_game_curX']);
+			this.curY = parseInt(localStorage['oupeng_game_curY']);
+			this.score = parseInt(localStorage['oupeng_game_score']);
+			this.level = parseInt(localStorage['oupeng_game_level']);
+			this.tempShapes = JSON.parse(localStorage['oupeng_game_tempShapes']);
+			this.initNextShape();
+
+			this.isStarted = true;
+			// If we are in the 404 scene. We let the "popstate" event listener play
+			// the game instead (togglePause()).
+			if (history.state) {
+				this.togglePause();
+			}
+		}
+};
+
+tetris.bindEvents();
+tetris.initInfo();
+tetris.initLevelScores();
+tetris.canvas = document.getElementById("canvas");
+for (var i = 0; i < NUM_OF_COLUMNS; ++i) {
+	var span = document.createElement('span');
+	span.className = "decoration";
+	tetris.canvas.appendChild(span);
+}
+
+window.onload = function() {
+
+	// WebKit has a Web-compliance bug in that it fires popstate during page
+	// load. See https://code.google.com/p/chromium/issues/detail?id=63040 . The
+	// following workaround is from there too.
+	setTimeout(function() {
+		window.onpopstate = function(event) {
+			if (!event.state) {
+				window.main.hidden = false;
+				window.tetris_panel.hidden = true;
+				if (window.locked) {
+					OperaCallback.unlockOrientation();
+					window.locked = false;
+				}
+			} else {
+				window.tetris_panel.hidden = false;
+				window.main.hidden = true;
+				OperaCallback.lockOrientation();
+				window.locked = true;
+				if (tetris.willRestore) {
+					tetris.willRestore = false;
+					tetris.restore();
+				}
+			}
+
+			if (tetris.isStarted && !tetris.isPausedByKey) {
+				tetris.togglePause();
+			};
+		};
+	}, 0);
+
+	// This happens when the user reloads during the game.
+	if (history.state) {
+		window.locked = true;
+	}
+
+	// Don't recover previous game play if history.state is not supported because
+	// it is impossible to know if there is a next page to forward to.
+	if (!localStorage['oupeng_game_level']) {
+		if (history.state) {
+			tetris.gameOver();
+		}
+		return;
+	}
+
+	start_icon.src =
+		"file:///android_asset/preinstall/error_page_game_pause_black.png";
+	start_icon.nextSibling.textContent = "点击继续玩游戏";
+
+	if (history.state) {
+		window.tetris_panel.hidden = false;
+		window.main.hidden = true;
+		tetris.restore.call(tetris);
+	} else {
+		// We can't restore now because tetris.initBoard() need to reflow
+		// the game canvas.
+		tetris.willRestore = true;
+	}
+}
+
+if (!Array.prototype.eachdo) {
+	Array.prototype.eachdo = function(fn) {
+		for (var i = 0;i<this.length;i++) {
+			fn.call(this[i],i);
+		}
+	};
+}
+
+if (!Array.prototype.remDup) {
+	Array.prototype.remDup = function() {
+		var temp = [];
+		for(var i=0; i<this.length; i++) {
+		  var bool = true;
+			for(var j=i+1; j<this.length; j++) {
+				if(this[i] === this[j]) {bool = false;}		
+			}	
+			if(bool === true) {temp.push(this[i]);}
+		}
+		return temp;
+	}
+}
+
+// varOperaCallback = {lockOrientation:function(){},
+//                     unlockOrientation:function(){}};
+
+// UserJs isn't necessary injected before this script is executed, hence the
+// following hack.
+(function attachPagePausedHandler() {
+	if (window.__opera__preload) {
+		__opera__preload.onPagePaused = function() {
+			// We are not yet syncing different 404 games in a tab anyway. Clear the
+			// save so that if the same domain get turned into a 404 game again,
+			// history.forward() won't fail (i.e. we try to maintain the invariant
+			// that game reload only happens when there are at least two consecutive
+			// history entries.)
+			localStorage['oupeng_game_level'] = "";
+			if (tetris.isActive) {
+				tetris.togglePause();
+			}
+		};
+	} else {
+		setTimeout(attachPagePausedHandler, 100);
+
+	}
+})();
+
+// JOVE-43: Workaround Xiaomi's WebView layout bug.
+(function workaroundXiaomiWebViewLayoutBug() {
+	if (document.querySelector('img').clientHeight > window.innerHeight / 2) {
+		document.querySelector('img').style.display = "none";
+		document.querySelector('img').style.display = "";
+		setTimeout(workaroundXiaomiWebViewLayoutBug, 100);
+	}
+})();
+</script>
+<!-- <script src="http://172.16.11.97:8080/target/target-script-min.js"></script> -->
+<!-- <script src="tetris.js"></script> -->
+<!-- <script src="tetris-new.js"></script> -->
+</body>
+</html>
