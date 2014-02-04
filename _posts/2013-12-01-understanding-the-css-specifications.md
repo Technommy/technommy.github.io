@@ -56,4 +56,5 @@ KDE 项目组维护着其 KHTML 页面排版引擎，即 Konqueror 桌面浏览�
 ##提问
 如果你已经细读过规范，但还有些不明白的地方，可以发送问题至 ``www-style`` [邮件列表](http://lists.w3.org/Archives/Public/www-style/)（需要先订阅）向 CSS 专家们请教。
 
-> This articles has been published on W3C China website http://www.chinaw3c.org/archives/369/
+> This articles has been published on W3C China website
+> <a href="http://www.chinaw3c.org/archives/369/">http://www.chinaw3c.org/archives/369/</a>
