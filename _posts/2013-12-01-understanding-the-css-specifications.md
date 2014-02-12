@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Understanding the CSS Specifications
+title: Understanding the CSS Specification
 date: 2013-12-01 04:01:00
 ---
 
