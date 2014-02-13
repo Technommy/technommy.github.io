@@ -14,7 +14,7 @@ Download PDF version by clicking <a href="/assets/resume_20131104_updated.pdf" t
 			"gender": "male",
 			"identification": "student",
 			"programming": "HTML > CSS (incl. less) > JavaScript > C++",
-			"language": "zh_CN, en, ru",
+			"language": "zh-native, en-fluent, ja-elementary",
 		}
 	]
 }
