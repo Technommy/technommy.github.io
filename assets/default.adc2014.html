@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>ADConf 2014 青少年开发者大会 – Official Website</title>
+<meta name="description" content="青少年开发者大会, ADConf, ADC, Developer">
+<meta name="author" content="saptarang">
+
+<!-- Mobile Specific Meta -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- Stylesheets -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="css/style.css" />
+<!-- Google Font Code -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet" media="screen">
+<link href="css/transitions.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+<style type="text/css"></style>
+
+<!-- Enable this css if you want to override styles-->
+<!--<link href="css/override.css" rel="stylesheet" media="screen">-->
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Favicon and Apple Icons -->
+<link rel="shortcut icon" href="img/icons/favicon.ico">
+<link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-touch-icon.png">
+<script type="text/javascript" src="js/modernizr-1.0.min.js"></script>
+</head>
+
+<body onLoad="initialize()">
+<!-- start HEADER -->
+<section id="top" class="page-block">
+  <header id="home">
+    <div class="container clearfix">
+      <div class="navigation">
+        <div class="row">
+          <div class="col-md-4 col-sm-3">
+            <h1 class="logo">
+            <a href="index.html" title="Primo"><img class="img-responsive" src="img/brand.png" alt="OnEvent"></a></h1>
+          </div>
+          <div class="col-md-8 col-sm-9"> 
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar navbar-default navbar-header" role="navigation">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navigation"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <nav>
+              <ul id="Navigation" class="list-inline collapse navbar-collapse">
+                <li><a href="#schedule" title="Schedule">日程安排</a></li>
+                <li><a href="#speakers" title="Speakers">讲者介绍</a></li>
+                <li><a href="#partners" title="Partners">合作伙伴</a></li>
+                <li><a href="#faq" title="FAQ">常见问题</a></li>
+                <li><a href="#venue" title="Venue">场地导向</a></li>
+                <li><a href="#footer" title="Subscribe to Our Newsletter">邮件订阅</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- end col-md-10 --> 
+        </div>
+        <!--end-row--> 
+      </div>
+      <!-- end navigation --> 
+    </div>
+    <!-- end container --> 
+  </header>
+  <div id="event-slider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner"> 
+      <!-- begin carousel-slide -->
+      <div class="item active"> <img src="img/slider/slide1.jpg" alt="slide" class="img-responsive"> </div>
+      <!-- end carousel-slide --> 
+      <!-- begin carousel-slide -->
+      <div class="item"> <img src="img/slider/slide2.jpg" alt="slide" class="img-responsive"> </div>
+      <!-- end carousel-slide --> 
+      <!-- begin carousel-slide -->
+      <div class="item"> <img src="img/slider/slide3.jpg" alt="slide" class="img-responsive"> </div>
+      <!-- end carousel-slide --> 
+    </div>
+    <!-- end carousel-inner --> 
+    
+    <!-- Controls --> 
+    <a class="left carousel-control" href="#event-slider" data-slide="prev"> <i class="fa fa-chevron-left"></i></a>
+    <a class="right carousel-control" href="#event-slider" data-slide="next"> <i class="fa fa-chevron-right"></i></a>
+  </div>
+</section>
+<!-- end HEADER --> 
+
+<!--BEGIN-INTRO-BOX-->
+<section id="intro" class="page-block">
+  <div class="container">
+    <div class="section">
+      <header class="page-head clearfix">
+        <div class="row">
+          <div class="col-md-10 col-sm-12 text-right">
+            <div class="venue text-left">
+              <h2>第三届青少年开发者大会</h2>
+              <p style="margin-top:5px;" class="text-muted">At Beijing Bayi High School, Haidian District, Beijing</p>
+            </div>
+            <div class="countdown styled"></div>
+          </div>
+          <div class="col-md-2 col-sm-12 text-center"> <a href="#" title="Register For This Event" class="btn register-trigger"><i class="fa fa-plus-circle"></i> 现在注册</a>
+            <h3 class="regHeading">Register For This <span>Event</span></h3>
+            <form id="register" method="post" action="form/register.php">
+            	<div class="field-wrapper">
+                    <div class="form-row">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" />
+                    </div>
+                    <div class="form-row">
+                      <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone" />
+                    </div>
+                    <div class="form-row">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" />
+                    </div>
+                    <div class="form-row clearfix">
+                      <textarea cols="60" rows="3" id="comment" name="comment" class="form-control" placeholder="Write your comment here..."></textarea>
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-custom btn-lg" id="submit" name="submit" />
+               </div>
+            </form>
+          </div>
+        </div>
+        <!--end-row--> 
+      </header>
+      <article>
+        <h3>活动 <span>简介</span></h3>
+        <p>青少年开发者大会是一个提供给青少年开发者学习交流的平台，邀请业内知名的技术社区和科技企业，参与并协助举办一系列沙龙活动，同时发放和推荐线上学习资源，并以一年一度的青少年开发者大会为核心。每一届大会都有不同的主题，技术顾问围绕主题进行经验讨论，总结一年中所遇到的学生个人项目，并邀请学生代表进行演讲。 
+        <br><br>
+        第三届青少年开发者大会计划于 2014 年 7 月 19 日-20 日召开，为期两天。大会主题为 "Enunciate your imagination"，Open & Explore。思维拓展，别出机杼。举办地为北京市八一中学。</p>
+      </article>
+    </div>
+    <!--end-section--> 
+  </div>
+</section>
+<!--END-INTRO-BOX--> 
+
+<!--BEGIN-SCHEDULE-->
+<section id="schedule" class="page-block">
+  <div class="container">
+    <div class="section no-padding clearfix"> 
+      
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs clearfix">
+        <li class="active">
+          	<a href="#event-schedule" data-toggle="tab"><i class="fa fa-clock-o"></i>
+          	<h5>活动日程<small>Event Schedule</small></h5>
+         	</a>
+        </li>
+        <li>
+        	<a href="#promo" data-toggle="tab"><i class="fa fa-play-circle"></i>
+          	<h5>社区宣传视频<small>Promotional Video</small></h5>
+          	</a>
+        </li>
+        <li>
+        	<a href="#event-gallery" data-toggle="tab"><i class="fa fa-picture-o"></i>
+          	<h5>以往活动照片<small>Previous Photos</small></h5>
+          	</a>
+        </li>
+        <li>
+        	<a href="#exec-presence" data-toggle="tab"><i class="fa fa-star"></i>
+          	<h5>筹办成员<small>Executive Presence</small></h5>
+          	</a>
+        </li>
+      </ul>
+      
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="event-schedule">
+          <h3><i class="fa fa-clock-o"></i> 活动 <span>日程</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit vitae nulla at ultricies. Suspendisse consequat tempor mi, eu tristique mi. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim convallis dolor at viverra. Nullam consequat nulla enim, eu vulputate magna varius quis. 
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+        </div>
+        <!--end-event-schedule-content-->
+        
+        <div class="tab-pane" id="promo">
+          <h3><i class="fa fa-play-circle"></i> 社区 <span>宣传视频</span></h3>
+        </div>
+        <!--end-event-schedule-content-->
+        
+        <div class="tab-pane" id="event-gallery">
+          <h3><i class="fa fa-picture-o"></i> 以往 <span>活动照片</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit vitae nulla at ultricies. Suspendisse consequat tempor mi, eu tristique mi. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim convallis dolor at viverra. </p>
+          <div class="img-grid clearfix">
+            <ul id="eg-thumbs" class="eg-thumbs clearfix">
+              <li> 
+              	<a href="img/gallery/large/01.jpg" title="Event PhotoGallery" rel="prettyPhoto[gallery]"> <img src="img/gallery/thumb/01.jpg" alt="Event Photo" class="img-responsive">
+                <div class="img-caption"><span>Image Caption 1</span></div></a>
+              </li>
+              <li> 
+              	<a href="img/gallery/large/02.jpg" title="Event PhotoGallery" rel="prettyPhoto[gallery]"> <img src="img/gallery/thumb/02.jpg" alt="Event Photo" class="img-responsive">
+                <div class="img-caption"><span>Image Caption 2</span></div></a>
+              </li>
+              <li>
+              	<a href="img/gallery/large/03.jpg" title="Event PhotoGallery" rel="prettyPhoto[gallery]"> <img src="img/gallery/thumb/03.jpg" alt="Event Photo" class="img-responsive">
+                <div class="img-caption"><span>Image Caption 3</span></div></a>
+              </li>
+              <li>
+              	<a href="img/gallery/large/04.jpg" title="Event PhotoGallery" rel="prettyPhoto[gallery]"> <img src="img/gallery/thumb/04.jpg" alt="Event Photo" class="img-responsive">
+                <div class="img-caption"><span>Image Caption 4</span></div></a>
+              </li>
+              <li>
+              	<a href="img/gallery/large/05.jpg" title="Event PhotoGallery" rel="prettyPhoto[gallery]"> <img src="img/gallery/thumb/05.jpg" alt="Event Photo" class="img-responsive">
+                <div class="img-caption"><span>Image Caption 5</span></div></a>
+              </li>
+              <li> 
+              	<a href="img/gallery/large/06.jpg" title="Event PhotoGallery" rel="prettyPhoto[gallery]"> <img src="img/gallery/thumb/06.jpg" alt="Event Photo" class="img-responsive">
+                <div class="img-caption"><span>Image Caption 6</span></div></a> 
+              </li>
+              <li> 
+              	<a href="img/gallery/large/07.jpg" title="Event PhotoGallery" rel="prettyPhoto[gallery]"> <img src="img/gallery/thumb/07.jpg" alt="Event Photo" class="img-responsive">
+                <div class="img-caption"><span>Image Caption 7</span></div></a> 
+              </li>
+              <li> 
+              	<a href="img/gallery/large/08.jpg" title="Event PhotoGallery" rel="prettyPhoto[gallery]"> <img src="img/gallery/thumb/08.jpg" alt="Event Photo" class="img-responsive">
+                <div class="img-caption"><span>Image Caption 8</span></div></a> 
+              </li>
+            </ul>
+          </div>
+          <!--end-img-grid--> 
+          
+        </div>
+        <!--end-event-schedule-content-->
+        
+        <div class="tab-pane" id="exec-presence">
+          <h3><i class="fa fa-star"></i> 筹办 <span>成员</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit vitae nulla at ultricies. Suspendisse consequat tempor mi, eu tristique mi. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim convallis dolor at viverra. </p>
+          <ul class="li-blocks clearfix">
+            <li><strong>Jonathan Doe</strong> - President, CompanyName</li>
+            <li><strong>Christine Martin</strong> - COO, CompanyName</li>
+            <li><strong>Richardson Hooper</strong> - Operations Manager, CompanyName</li>
+            <li><strong>Agatha Collins</strong> - Enterprise Manager, CompanyName</li>
+            <li><strong>Paul Martin</strong> - Creative Director, CompanyName</li>
+            <li><strong>Johnny Connor</strong> - CEO, CompanyName</li>
+            <li><strong>Jonathan Doe</strong> - President, CompanyName</li>
+            <li><strong>Christine Martin</strong> - COO, CompanyName</li>
+            <li><strong>Richardson Hooper</strong> - Operations Manager, CompanyName</li>
+            <li><strong>Agatha Collins</strong> - Enterprise Manager, CompanyName</li>
+            <li><strong>Paul Martin</strong> - Creative Director, CompanyName</li>
+            <li><strong>Johnny Connor</strong> - CEO, CompanyName</li>
+          </ul>
+        </div>
+        <!--end-event-schedule-content--> 
+      </div>
+    </div>
+  </div>
+</section>
+<!--END-SCHEDULE--> 
+
+<!--BEGIN-SPEAKERS-->
+<section id="speakers" class="page-block">
+  <div class="container">
+    <div class="section clearfix bottom-margin">
+      <header class="page-head colored clearfix">
+        <h2>讲者介绍</h2>
+        <p class="text-muted">We’ve got expert’s speech from around the world </p>
+      </header>
+      <article>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit vitae nulla at ultricies. Suspendisse consequat tempor mi, eu tristique mi. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim convallis dolor at viverra. Nullam consequat nulla enim, eu vulputate magna varius quis. 
+          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+      </article>
+    </div>
+    <div class="row clearfix speaker-grid">
+    
+      <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="section no-padding">
+          <figure> 
+          	<img src="img/speakers/speaker1.jpg" alt="Speaker" class="img-responsive" />
+            <figcaption class="speaker-info"> 
+            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit vitae nulla at ultricies. Suspendisse consequat tempor mi, eu tristique mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim convallis dolor at viverra.
+            </figcaption>
+          </figure>
+          <div class="speaker clearfix">
+            <div class="col-md-10 col-sm-9 col-xs-9">
+              <h6>Richard Doe</h6>
+              <p>Vice President, Company Name</p>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3 readIcon"> <i class="fa fa-chevron-circle-down"></i> </div>
+          </div>
+        </div>
+      </div>
+      <!--end-col-md-4-->
+      
+      <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="section no-padding">
+          <figure> 
+          	<img src="img/speakers/speaker2.jpg" alt="Speaker" class="img-responsive" />
+            <figcaption class="speaker-info"> 
+            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit vitae nulla at ultricies. Suspendisse consequat tempor mi, eu tristique mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim convallis dolor at viverra.
+            </figcaption>
+          </figure>
+          <div class="speaker clearfix">
+            <div class="col-md-10 col-sm-9 col-xs-9">
+              <h6>Christine Doe</h6>
+              <p>CEO, Company Name</p>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3 readIcon"> <i class="fa fa-chevron-circle-down"></i> </div>
+          </div>
+        </div>
+      </div>
+      <!--end-col-md-4-->
+      
+      <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="section no-padding">
+          <figure> 
+          	<img src="img/speakers/speaker3.jpg" alt="Speaker" class="img-responsive" />
+            <figcaption class="speaker-info"> 
+            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit vitae nulla at ultricies. Suspendisse consequat tempor mi, eu tristique mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim convallis dolor at viverra.
+            </figcaption>
+          </figure>
+          <div class="speaker clearfix">
+            <div class="col-md-10 col-sm-9 col-xs-9">
+              <h6>Jonathan Doe</h6>
+              <p>Operations, Company Name</p>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3 readIcon"> <i class="fa fa-chevron-circle-down"></i> </div>
+          </div>
+        </div>
+      </div>
+      <!--end-col-md-4-->
+      
+      <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="section no-padding no-margin">
+          <figure> 
+          	<img src="img/speakers/speaker1.jpg" alt="Speaker" class="img-responsive" />
+            <figcaption class="speaker-info"> 
+            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit vitae nulla at ultricies. Suspendisse consequat tempor mi, eu tristique mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim convallis dolor at viverra.
+            </figcaption>
+          </figure>
+          <div class="speaker clearfix">
+            <div class="col-md-10 col-sm-9 col-xs-9">
+              <h6>Richard Doe</h6>
+              <p>Vice President, Company Name</p>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3 readIcon"> <i class="fa fa-chevron-circle-down"></i> </div>
+          </div>
+        </div>
+      </div>
+      <!--end-col-md-4-->
+      
+      <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="section no-padding no-margin">
+          <figure> 
+          	<img src="img/speakers/speaker2.jpg" alt="Speaker" class="img-responsive" />
+           <figcaption class="speaker-info"> 
+            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit vitae nulla at ultricies. Suspendisse consequat tempor mi, eu tristique mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim convallis dolor at viverra.
+            </figcaption>
+          </figure>
+          <div class="speaker clearfix">
+            <div class="col-md-10 col-sm-9 col-xs-9">
+              <h6>Christine Doe</h6>
+              <p>CEO, Company Name</p>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3 readIcon"> <i class="fa fa-chevron-circle-down"></i> </div>
+          </div>
+        </div>
+      </div>
+      <!--end-col-md-4-->
+      
+      <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="section no-padding no-margin">
+          <figure> 
+          	<img src="img/speakers/speaker3.jpg" alt="Speaker" class="img-responsive" />
+           <figcaption class="speaker-info"> 
+            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit vitae nulla at ultricies. Suspendisse consequat tempor mi, eu tristique mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim convallis dolor at viverra.
+            </figcaption>
+          </figure>
+          <div class="speaker clearfix">
+            <div class="col-md-10 col-sm-9 col-xs-9">
+              <h6>Jonathan Doe</h6>
+              <p>Operations, Company Name</p>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3 readIcon"> <i class="fa fa-chevron-circle-down"></i> </div>
+          </div>
+        </div>
+      </div>
+      <!--end-col-md-4--> 
+    </div>
+    <!--end-row--> 
+    
+  </div>
+</section>
+<!--END-SPEAKERS--> 
+
+<!--BEGIN-PARTNERS-->
+<section id="partners" class="page-block">
+  <div class="container">
+    <div class="section">
+      <header class="page-head">
+        <h2>合作伙伴</h2>
+        <p class="text-muted">Our Esteemed Partners/Sponsors for this event</p>
+      </header>
+      <article>
+        <p>Aliquam nulla mi, cursus ac tortor quis, fringilla viverra turpis. Donec tincidunt urna erat, in porttitor purus pharetra quis. Vestibulum rhoncus blandit suscipit. 
+          Nullam id ullamcorper diam. Curabitur porttitor leo in euismod eleifend. Nulla ac nunc ac leo commodo ullamcorper. Integer tempus fermentum urna vitae dignissim. 
+          Proin adipiscing neque at urna facilisis, nec mattis lacus laoreet. Nullam vitae feugiat lacus.</p>
+      </article>
+      <div class="partner clearfix"> 
+      	<a href="#" title="Partner Brand"> <img class="img-responsive" src="img/partners/1.png" alt="Partner Brand" /> </a> 
+        <a href="#" title="Partner Brand"> <img class="img-responsive" src="img/partners/2.png" alt="Partner Brand" /> </a> 
+        <a href="#" title="Partner Brand"> <img class="img-responsive" src="img/partners/3.png" alt="Partner Brand" /> </a> 
+        <a href="#" title="Partner Brand"> <img class="img-responsive" src="img/partners/4.png" alt="Partner Brand" /> </a> 
+        <a href="#" title="Partner Brand"> <img class="img-responsive" src="img/partners/1.png" alt="Partner Brand" /> </a> 
+        <a href="#" title="Partner Brand"> <img class="img-responsive" src="img/partners/2.png" alt="Partner Brand" /> </a> 
+        <a href="#" title="Partner Brand"> <img class="img-responsive" src="img/partners/3.png" alt="Partner Brand" /> </a> 
+        <a href="#" title="Partner Brand"> <img class="img-responsive" src="img/partners/4.png" alt="Partner Brand" /> </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--END-PARTNERS--> 
+
+<!--BEGIN-FAQ-->
+<section id="faq" class="page-block">
+  <div class="container">
+    <div class="section">
+      <header class="page-head">
+        <h2>常见问题</h2>
+        <p class="text-muted">Generic Questions About This Event</p>
+      </header>
+      <article class="row">
+        <div class="panel-group clearfix" id="questions">
+          <div class="col-md-6 col-sm-12">
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#questions" href="#question1"> 1 <span>Lorem ipsum dolor sit amet?</span> </a> </h4>
+              </div>
+              <div id="question1" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                    Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                  <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. 
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#questions" href="#question2"> 2 <span>Nulla hendreit vitae consequat?</span> </a> </h4>
+              </div>
+              <div id="question2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                    Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                  <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. 
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#questions" href="#question3"> 3 <span>Suspendisse dignissim convallis dolor at viverra?</span> </a> </h4>
+              </div>
+              <div id="question3" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                    Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                  <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. 
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#questions" href="#question4"> 4 <span>Consectetur adipiscing elit enim vulputate?</span> </a> </h4>
+              </div>
+              <div id="question4" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                    Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                  <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. 
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!--end-of-column-6-->
+          <div class="col-md-6 col-sm-12">
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#questions" href="#question5"> 5 <span>Lorem ipsum dolor sit amet?</span> </a> </h4>
+              </div>
+              <div id="question5" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                    Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                  <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. 
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#questions" href="#question6"> 6 <span>Nulla hendreit vitae consequat?</span> </a> </h4>
+              </div>
+              <div id="question6" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                    Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                  <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. 
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#questions" href="#question7"> 7 <span>Suspendisse dignissim convallis dolor at viverra?</span> </a> </h4>
+              </div>
+              <div id="question7" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                    Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                  <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. 
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#questions" href="#question8"> 8 <span>Consectetur adipiscing elit enim vulputate?</span> </a> </h4>
+              </div>
+              <div id="question8" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                    Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                  <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. 
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end-of-column-6--> 
+        </div>
+        <!--end-of-accordion--> 
+        
+      </article>
+    </div>
+  </div>
+</section>
+<!--END-FAQ--> 
+
+<!--BEGIN-VENUE-->
+<section id="venue" class="page-block">
+  <div class="container">
+    <div class="section clearfix bottom-margin">
+      <header class="page-head colored clearfix">
+        <h2>活动场地</h2>
+        <p style="font-size:12px;margin-top:5px;" class="text-muted">北京市北京八一中学</p>
+      </header>
+      <article>
+        <div id="map_canvas"></div>
+        <div class="row clearfix">
+          <div class="col-md-3 col-sm-12 column">
+            <div class="column-content">
+              <h3>活动 <span>位置</span></h3>
+              <ul class="address">
+                <li> 
+                	<i class="fa fa-map-marker"></i> <strong>具体位置</strong><br>
+                  	Set a location in here 
+                </li>
+                <li> 
+                	<i class="fa fa-phone"></i> <strong>联系我们</strong><br>
+                  	Set phone number in here
+                </li>
+                <li> 
+                	<i class="fa fa-envelope"></i> <strong>邮件我们</strong><br>
+                  	<a href="mailto:info@yourdomain.com">contact@adc-cn.org</a> 
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 column directions-input">
+            <div class="column-content">
+              <h3>场地 <span>导向</span></h3>
+              <form action="/routebeschrijving" onSubmit="calcRoute();return false;" id="routeForm">
+                <label for="routeStart"><strong>Destination From:</strong></label>
+                <input type="text" id="routeStart" value="50 California Street">
+                <label for="travelMode"><strong>Via(Optional):</strong></label>
+                <input type="text" id="routeVia">
+                <label>Travel mode:</label>
+                <div class="clearfix">
+                  <label class="radio-option">
+                    <input type="radio" name="travelMode" value="DRIVING" checked />
+                    Driving</label>
+                  <label class="radio-option">
+                    <input type="radio" name="travelMode" value="BICYCLING" />
+                    Bicylcing</label>
+                  <label class="radio-option">
+                    <input type="radio" name="travelMode" value="TRANSIT" />
+                    Public transport</label>
+                  <label class="radio-option last">
+                    <input type="radio" name="travelMode" value="WALKING" />
+                    Walking</label>
+                </div>
+                <input type="submit" value="Get Directions" class="btn btn-block">
+              </form>
+            </div>
+          </div>
+          <div class="col-md-5 col-sm-12 column directions-results">
+            <div class="column-content">
+              <h3>Directions</h3>
+              <div id="directionsPanel"> Enter <strong>Destination From</strong> under <strong>Get Directions</strong> and Click on Get Directions Button. </div>
+            </div>
+          </div>
+        </div>
+        <!--end-of-row--> 
+      </article>
+    </div>
+  </div>
+</section>
+<!--END-VENUE--> 
+
+<!--BEGIN-FOOTER-->
+<footer id="footer" class="page-block">
+  <div class="container">
+    <div class="section no-border">
+      <header class="page-head colored clearfix">
+      
+        <div class="col-md-6 col-sm-12">
+          <h3 class="subscribeHeading">订阅我们的最新消息</h3>
+          <form action="form/subscribe.php" id="subscribeForm" method="post">
+            <div class="form-row">
+              <input type="email" id="emailSubscribe" name="emailSubscribe" class="form-control" placeholder="Enter Your Email Address Here..." />
+              <input type="submit" id="sub-submit" name="sub-submit" value="" class="" />
+            </div>
+          </form>
+        </div>
+        
+        <div class="col-md-5 col-md-offset-1 col-sm-12">
+          <h3>关注我们</h3>
+          <div class="social">
+            <ul class="list-inline">
+              <li><a class="tips" href="#" title="Follow Us on Facebook"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="tips" href="#" title="Follow Us on Twitter"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="tips" href="#" title="Watch Our Videos"><i class="fa fa-youtube-play"></i></a></li>
+              <li><a class="tips" href="#" title="Follow Us On Pinterest"><i class="fa fa-pinterest-square"></i></a></li>
+              <li><a class="tips" href="#" title="Follow Us on LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="tips" href="#" title="Watch Our gallery"><i class="fa fa-flickr"></i></a></li>
+              <li><a class="tips" href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+              <li><a class="tips" href="#" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <!-- end social --> 
+        </div>
+      </header>
+      <p class="text-center">Adolescent Developer Community &copy; <span class="year"></span> . All Rights Reserved.</p>
+      <a href="#top" class="top"><i class="fa fa-arrow-up fa-lg"></i></a> 
+    </div><!--end-of-section--> 
+  </div>
+</footer>
+<!--END-FOOTER--> 
+
+<script src="js/jquery.js"></script> 
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script> 
+<script type="text/javascript" src="js/directions.js"></script>
+<script src="js/placeholders.js"></script> 
+<script src="js/jquery.hoverdir.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.prettyPhoto.js"></script> 
+<script src="js/custom.js"></script> 
+<script src="js/onevent.js"></script> 
+<script src="js/jquery.countdown.js"></script> 
+<script src="js/jquery.fitvids.js"></script>
+</body>
+</html>
