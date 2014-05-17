@@ -1,0 +1,403 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4;
+  text-decoration: none; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+<title>图灵社区</title>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$$$','$$$']]}});</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>图灵社区</h1>
+
+<hr />
+
+<h4>你从什么时候开始编程？</h4>
+
+<hr />
+
+<p>15 岁那年暑假碰巧没什么事情，父亲让我尝试帮他做些 LAMP 方面的工作，接触到了 CentOS，然后就开始借助 Google 自学，逛英文社区，当时有建过一套 wiki 尝试做 knowledge base 来整合所有翻过的计算机词条和有用的文章，后来因为大部分条目没标签化，加上没时间整理也就没碰了。自己在编程方面一直最感兴趣的还是计算机视觉，譬如人像识别和图像搜索，最初是因为中学在社团折腾的时候，看到 Thrun 教授在 05 年 DARPA Grand Challenge 后给 Stanley 无人驾驶车写的<a href="http://robots.stanford.edu/papers/thrun.stanley05.pdf">那篇论文</a>，当时就觉得这是个很神奇的领域。</p>
+
+<h4>编程对你来说意味着什么？</h4>
+
+<hr />
+
+<p>我觉得编程是一个能帮助人更快完成目标任务的工具，实现以前仅仅停留在概念上的项目，比如艺术学生会借助 Processing 演示项目，学统计的学生会用 R 画出丰富的可视化数据图，有时也会因为生活中的某个小问题来写个应用来解决。去年我翻译过一部名为 "What Most School Don't Teach" 的视频，很多大公司的创始人都有出镜和大家表达自己对于编程看法，其中 Will.I.Am 说他也在学习编程，还提到「Great coders are today’s rockstars.」，Valve 的创始人还说「拥有编程能力就像是现在的人拥有魔法」，况且随着现在越来越方便入门者上手的工具，似乎也没有什么不去学的理由。对自己来说，在编程的基础上去应用不同领域的项目是最有趣的事情，能够产生很多新颖的东西，甚至是新的领域，生物计算，或是 Generative Art。</p>
+
+<h4>为什么要发起青少年开发者社区？</h4>
+
+<hr />
+
+<p>起初的想法很简单，因为当时看到有很多针对从业人士的开发者社区，但并没有一个针对对这方面感兴趣的学生的线下平台，加上多数的校内社团并没有很好的线下资源提供给学生让他们接触这方面的知识，于是就有了建一个针对学生开发者（大概范围是上大学以前的在校学生，或是 homeschool）社区的想法，把这个群体聚在一起。当时的想法是线上把资源整合在一个平台上（类似 hackernews 或 layervault 但非新闻内容），线下组织 meetup 和 workshop 活动让来自不同地方的学生开发者相互认识，找到合适的人一起做可能以兴趣为基础的项目，和邀请的技术专家交流，听他们针对学生开发者的主题分享，我觉得是件很有意义的事。</p>
+
+<h4>高考对你来说是不是一种压力？周围的人（父母和老师）有没有认为课余活动会影响学习？</h4>
+
+<hr />
+
+<p>算是吧，不过我从高二下学期就没怎么上课，所以也就不在这个群体里啦。高一的时候在网上找到字幕组和别人共同翻译国外公开课的视频，通过电邮交流认识到 MIT 线性代数课程的讲师 Prof. Strang，经过几个星期的频繁交流后他愿意为我提供一份推荐，那时根据自己情况，和家里人商量的了一段时间后就开始准备出国读书的事，随即就跟学校申请离班学习，剩下的时间时间要么是在学校找没人或人少的地方自习，要么在家里，作息也很正常。当时就有很多同学和老师支持我做的这件事，也是这个时候才有时间做社区。</p>
+
+<h4>青少年开发者社区参与人数有多少？这些年轻的开发者是否面临升学压力？如何平衡？</h4>
+
+<hr />
+
+<p>到现在参与的学生线上基本都在 QQ 群，包括大概 100 多个学生和邀请的顾问，其余的交流就是线下活动，每次活动大概在 20 人左右的样子，分享的内容也在慢慢的改进。之后会做一个线上的讨论区，慢慢增加些以学生开发者为主题的功能或版块。国内对这方面感兴趣的学生多多少少都会有来自学校和家长的压力，当然还有升学压力，所以高考大部分的学生会暂时放下自己的事，等结束后再做；另一部分学生会选择参加信息学竞赛，成绩优秀的能够获得保送名额；还有就是国际班和 homeschool 的学生，因为这两个群体都有相对充足的时间，所以或多或少都能在学生时代做出些有意思的事。每个人都有自己的选择，不同的道路怎么走只要自己尽力了就好，有些事情的确需要临时放下，以后再找其他机会补上也不迟。</p>
+
+<h4>社区活动中有哪些会员或非会员让你印象深刻？</h4>
+
+<hr />
+
+<p>Twitter 上有一群对计算机充满热情的学生，活跃的中学生颇多。刚开始筹办活动的时候就找身边的资源逐个认识，当然深圳的居多，比如有一位国际班的学生从初中就在开打 iOS 应用，高三那年拿了 Apple WWDC 的 scholarship，有来自广州的中学生在 GitHub 上写了个有很多行业人士关注的 Node.js 开发框架，有高中就已经是 Wikipedia 中文社群的管理员，还有因为学校饭堂饭菜实在不行就开玩笑地时不时拿 NFC hack 自己的饭卡，各种不同方面都有特长的学生开发者，Hacker 也好，Developer 也好，都是基于浓厚兴趣的体现。</p>
+
+<h4>青少年开发者社区的活动有没有成年开发者的参与？和他们一起学习和交流有什么样的体会？</h4>
+
+<hr />
+
+<p>顾问应该算吧，不过应该是指观众，大多数成年观众对于这样活动的反馈就是很新颖，有些会参与到志愿工作中，提供一些活动策划的经验，也有会利用业余时间帮助我们开发线上平台。能从他们的经验中得到最大的益处就是活动策划，前期推广，场务，因为有了这些帮助，初期的活动才会得到更多人的支持。</p>
+
+<h4>创办维护社区的过程中有过什么样的困难？</h4>
+
+<hr />
+
+<p>一个还是资金吧，特别幸运的是一开始跟学校提出资金申请后，上层觉得对学生们很有意义就给了我们一笔钱进行初期的筹办，不过慢慢的到了第二年举办的活动，一些报销和场地租用就成了问题。</p>
+
+<p>另外就是社区管理，因为自己时间安排有差就没有提供很多帮助，团队成员在策划时难免出现偏差，前面两次活动（大会）都没有很好的把控好内容和安排问题，出现了不太靠谱的内容让大家也很尴尬，到了后来（包括现在也是）就开始向一些活动策划团队请教，找到合适的方法来体现这个社区的特点，比如让学生开发者分享自己的项目，开一个小的 workshop 和邀请的顾问们讨论，都很有意思，慢慢地发展不同地点的 meetup，有靠谱的分享内容，我们现在也正在逐渐完善这方面的过程。</p>
+
+<p>最后想说（个题外话？<em>保留字段</em>），我一开始最担心的是顾问邀请方面，但并没有遇上很多的困难，那时用微博私信和电邮邀请，大多数人都回复了并且很愿意参与作为演讲嘉宾。当时邀请来自 Opera 的吕康豪先生，一开始是希望找他作为嘉宾在活动上分享关于如何参与到 W3C 兴趣小组中并贡献，最后他不但愿意为我们最开始的网站建设提供帮助，还在筹办的时候给予社区的资金捐助，后来因为社区活动的时间和另外一场他已经要参加的技术会议有冲突，还专门的录制了一段分享（演讲）视频，很感谢他对我的信任和对我做的这件事的支持。</p>
+
+<h4>社区对你来说最大的意义是什么？对于其他青少年开发者来说，你认为他们从社区得到的最大收获是什么？</h4>
+
+<hr />
+
+<p>人际圈真的很重要，无论是哪个社区，都可以认识到很多有意思的人，对这个社区的学生来讲就是一个能和各种各样厉害的人交流的机会，技术专家也好，同龄人也好，这些都会是很意义的经历。同时还有社区提供的针对学生开发者的分享，和现在正在策划的圆桌讨论和 workshop（形式类似 Google 之前举办过的一个 Code-in 活动，大概就是让邀请的专家带学生开发者认识开源项目，学生找一个议题，中间和负责该议题的老师邮件或者 IRC 交流，提交可以合格的代码或文档以完成议题，最后看谁完成的最多来排名）。社区对我最大的意义就是帮到了很多学生开发者聚在一起，让我在这期间认识了很多不同行业的有意思的人，他们拥有的不同资源和技能都能带动社区和学生开发者的发展。</p>
+
+<h4>随着一批批的开发者从青少年变成成年人，未来他们将以怎样的角色参与到社区中来？</h4>
+
+<hr />
+
+<p>可能会是以后的分享嘉宾，也可能会捐助社区或是提供不同层面上的帮助，只要多数学生开发者认为社区对他们有帮助，那么也就能体现出这样一个平台的重要性了。</p>
+
+<h4>你认为教育的意义是什么？</h4>
+
+<hr />
+
+<p>我现在没法很好的表述出来，爱因斯坦在《Ideas and Opinions》里说</p>
+
+<blockquote><p>The most important method of education accordingly always has consisted of that in which the pupil was urged to actual performance.</p></blockquote>
+
+<p>所以可能，我觉得兴趣和拥有对驱动学习的持久度是开始，接下来的发展／实践才是需要「教育」行使的地方，不过多数的中学老师却很少发挥这个作用，以至于可能会扼制到学生的兴趣发展。最后提一句 /byvoid 之前有在 twitter 上<a href="https://twitter.com/byvoid/status/323037271609704448">说的</a>：</p>
+
+<blockquote><p>「現代教育起源於普魯士德國工業革命時代生產普通技能工人的批量化方法，目的是讓稀缺的教育資源能夠儘可能覆蓋到多的人，因此發明了在學校教室由老師授課的方法。而現在教育已經不是什麼稀缺資源了，幾乎所有人都能廉價地從書本、網絡獲取大量的知識，普魯士的教育模式已經過時了。」</p></blockquote>
+
+<h4>你参与过哪些有趣的项目？</h4>
+
+<hr />
+
+<p>我参与过最有趣的就是各种 Web 标准项目，这是我这两年来最感兴趣的技术主题，也是我最初了解社群发展的一个渠道，比如有了解 Mozilla 的人会发现他们的开发者网络很开放，在这个工程师主导的社群里，任何开发者们可以提 bug，并且有机会提交自己的 patch，这种你打完 patch 等于全世界在用这个软件的人都运行你的代码真是「<em>虚荣心</em> 暴增」啊。我最开始是在 W3C 的 HTML5 兴趣小组贡献文档翻译，订阅 www-style 和 es-discuss 的邮件组，以及 IRC 上的聊天，然后通过去年的 TTWF 开始写 CSS 测试案例了解到很多有趣的 hacks，觉得特别幸运的是那时候参加深圳站活动正巧碰上 W3C 的 TPAC 年会，基本上参与到 W3C 标准活动的所有 Web 技术专家都到场了，还在沙发上和 Tim Berners-Lee 先生有过几分钟的小聊。这也是 Web 作为一个开放平台，大家都有平等的机会为当前的体系作贡献，甚至还有机会在邮件组里和语言的发明人交流。</p>
+
+<h4>目前在做什么？对未来有什么样的打算？</h4>
+
+<hr />
+
+<p>去年是我的第一个 gap year，在 Opera 公司度过了很有意义的 8 个月的实习期，碰到了很多特别优秀和有趣的同事，回深圳后自己经过了一段时间的思考，打算另起一次间隔年，现在在 Knewone 深圳工作，期间做些适合自己的 remote work，摄影项目和 pro bono，。接下来会向 EECS 方向申请，希望快点在 MIT 听到给予我推荐的 Strang 教授的线代课（哈哈）。对于将来的选择，未来四年也不知道会发生什么变化，不偏离自己想做的就好了。</p>
+</body>
+</html>
