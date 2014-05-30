@@ -9,7 +9,7 @@ title: About Me
 	I’m Tommy Jingtao-Liu (刘敬韬), born Aug 26 1995 in Hunan, P.R.China.
 </p>
 
-```html
+{% highlight python %}
 CAT I
 * http://careers.mozilla.org/en-US/listings/
 * https://github.com/about/jobs
@@ -22,7 +22,7 @@ CAT I
 * http://research.microsoft.com/en-us/jobs/fulltime/apply_researcher.aspx
 * https://www.duolingo.com/jobs
 * http://soundcloud.com/jobs
-```
+{% endhighlight %}
 
 <script type="text/javascript" class="douban-travel-show" src="/trip/service/travelbadge.js?user=technommy&amp;status=visited&amp;count=15&amp;width=500px&amp;height=220px&amp;zoom=3"></script>
 
