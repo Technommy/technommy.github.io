@@ -3,7 +3,7 @@ layout: page
 title: Mini Résumé
 ---
 
-Download PDF version by clicking <a href="/assets/resume_20131104_updated.pdf" target="_blank">here</a>.
+Download PDF version by clicking <a href="/assets/resume.json" target="_blank">here</a>.
 
 {% highlight json %}
 {
@@ -12,7 +12,7 @@ Download PDF version by clicking <a href="/assets/resume_20131104_updated.pdf" t
 			"zh_name": "Jingtao Liu",
 			"en_name": "Tommy",
 			"gender": "male",
-			"identification": "student",
+			"identification": "Gap year student",
 			"programming": "HTML > CSS (incl. less) > JavaScript > C++",
 			"language": "zh-native, en-fluent, ja-elementary",
 		}
