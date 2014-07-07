@@ -16,14 +16,32 @@
 			"blog": "http://technommy.github.io",
 			"portfolio": "http://cargocollective.com/technommy"
 		},
-		"profiles": {
-			"twitter": "technommy",
-			"github": "technommy",
-			"dribbble": "technommy",
-			"behance": "technommy",
-			"instagram": "technommy",
-			"flickr": "technommy"
-		}
+		"profiles": [
+			{
+				"twitter": "technommy",
+				"url": "https://twitter.com/technommy"
+			},
+			{
+				"github": "technommy",
+				"url": "http://github.com/technommy"
+			},
+			{
+				"dribbble": "technommy",
+				"url": "http://dribbble.com/technommy"
+			},
+			{
+				"behance": "technommy",
+				"url": "http://behance.net/technommy"
+			},
+			{
+				"flickr": "technommy",
+				"url": "http://flickr.com/people/technommy/"
+			},
+			{
+				"linkedin": "Jingtao (Tommy) Liu",
+				"url": "http://www.linkedin.com/profile/view?id=134099841"
+			},
+		]
 	},
 	"work": [
 		{
@@ -64,6 +82,42 @@
 			}
 		}
 	],
+	"activities": [
+		{
+			"organization": "oCourse Translation Group for Open Course",
+			"position": "Translator, Former Leader of Course Production",
+			"startDate": "2014-08",
+			"endDate": "Present",
+			"overview": "It's a non-profit translation group focused on Open Course Translation.",
+			"url": [
+				{
+					"website": "http://ocourse.org/",
+					"comment": "Domain already deactivated due to profit reason"
+				},
+				{
+					"website": "http://e.weibo.com/ocourse",
+					"comment": "With the website has been closed, you can read updates on our Sina Microblog"
+				}
+			]
+		},
+		{
+			"organization": "W3C HTML5 Chinese Interest Group",
+			"position": "Docs Contributor",
+			"startDate": "2012-10",
+			"endDate": "Present",
+			"overview": "Make zh_CN translation for official W3C standardized documents.",
+			"url": [
+				{
+					"website": "http://www.w3.org/Search/Mail/Public/search?type-index=public-html-ig-zh&index-type=t&keywords=technologier%40gmail.com&search=Search",
+					"comment": "Mailing list"
+				},
+				{
+					"website": "http://www.chinaw3c.org/contributors.html",
+					"comment": "Contributors list on W3C China Website"
+				}
+			]
+		}
+	]
 	"education": [
 		{
 			"schoolName": "Shenzhen Meilin High School",
@@ -99,7 +153,11 @@
 	"languages": [
 		{
 			"name": "Mandarin Chinese",
-			"level": "Native"
+			"level": "Native proficiency"
+		},
+		{
+			"name": "Cantonese",
+			"level": "Limited working proficiency"
 		},
 		{
 			"name": "English",
@@ -116,6 +174,10 @@
 			"kewords": [
 				"Jake Shimabukuro"
 			]
+		},
+		{
+			"name": "Street Photography",
+			"links": "http://instagram.com/technommy"
 		}
 	]
 }
