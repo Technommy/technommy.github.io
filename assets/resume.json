@@ -1,127 +1,121 @@
 {
-	"activities": [
+	"bio": {
+		"firstName": "Jingtao",
+		"lastName": "Liu",
+		"email": {
+			"work": "tommy@knewone.com",
+			"personal": "hi@technom.me"
+		},
+		"phone": {
+			"personal": "+86 136 1289 2748"
+		},
+		"location": {
+			"city": "Shenzhen, Guangdong, People Republic of China"
+		},
+		"website": {
+			"blog": "http://technommy.github.io",
+			"portfolio": "http://cargocollective.com/technommy"
+		},
+		"profiles": {
+			"twitter": "technommy",
+			"github": "technommy",
+			"dribbble": "technommy",
+			"behance": "technommy",
+			"instagram": "technommy",
+			"flickr": "technommy",
+		}
+	},
+	"work": [
 		{
-			"event": "Opera Software China",
-			"title": "Intern",
-			"description": "<text>",
-			"timespan": "Aug 26 ~ Present",
-			"place": "Beijing, P.R.China"
+			"company": "KnewOne",
+			"position": "Interaction Designer",
+			"website": "http://knewone.com/help",
+			"startDate": "2014-05-19",
+			"endDate": "2014-10-31",
+			"overview": "Craft both Desktop and Mobile webpages' user interface and interaction, including prototype and demo craft.",
 		},
 		{
-			"event": "the First Adolescent Developer Conferece in China",
-			"title": "founder",
-			"description": "<text>",
-			"timespan": "Nov 17 ~ 18 2012",
-			"place": "Shenzhen, P.R.China",
-			"media-report": [
-				{
-					"shenzhen-newspaper": "http://wb.sznews.com/html/2012-11/06/content_2264722.htm",
-					"tencent-technology-section": "http://tech.qq.com/a/20121121/000147.htm"
-				}
-			],
-			"external-links": [
-				{
-					"title": "<title>",
-					"url": "<url>"
-				}
-			]
+			"company": "Opera Software",
+			"position": "Developer Intern",
+			"website": "http://oupeng.com/",
+			"startDate": "2013-08-26",
+			"endDate": "2014-03-01",
+			"overview": "In charge of the community website develelopment to Oupeng X (a lab version to Opera Mobile Browser in China) and Sphinx Game Engine (the first HTML5 Game Engine from Opera), developed with multiple programming abilities like JavaScript / CSS / PHP, bug fixes for several games running on Sphinx game engines.",
 		},
 		{
-			"event": "the Second Adolescent Developer Conference in China",
-			"title": "co-curator",
-			"description": "<text>",
-			"timespan": "Jul 27th 2013",
-			"place": "Beijing, P.R.China",
-			"media-report": [
-				{
-					"global-times-china": "<waiting for image upload>",
-					"guokr": "http://www.guokr.com/event/271"
-				}
-			],
-			"external links": [
-				{
-					"title": "<title>",
-					"url": "<url>"
-				}
-			]
+			"company": "Adolescent Developer Community",
+			"position": "Founder",
+			"website": "http://adc-cn.org/",
+			"startDate": "2012-04-16",
+			"endDate": "Present",
+			"overview": "Founded conference at first, then crafted the circle scope of ADCmnt (short for Adolescent Developer Commnunity)",
+			"highlights": "Curator of the 1st Conference (2012.adc-cn.org) and Co-curator of 2nd Conference (2013.adc-cn.org), in charge of all design productions, cooperated with few notable company and technology group in China like Tencent / Baidu and OSChina."
 		},
 		{
-			"event": "HTML5 Chinese Interest Group at W3C",
-			"title": "translator",
-			"description": "<text>",
-			"timespan": "Sep 2012 ~ present",
-			"place": "Beijing, P.R.China",
-			"external links": [
-				{
-					"title": "personal profile",
-					"url": "http://www.w3.org/html/ig/zh/wiki/User:Jliu11"
-				}
-			]
-		},
-		{
-			"event": "oCourse translation group for open course",
-			"title": "leader of course production and translator",
-			"description": "<text>",
-			"timespan": "Oct 2011 ~ present",
-			"place": "Online",
-			"course production": [
-				{
-					"18.06@MIT": "Linear Algebra"
-				},
-				{
-					"Math.3C@UCLA": "Probability for Life Science student"
-				},
-				{
-					"EE364A@Stanford": "Convex Optimization I"
-				},
-				{
-					"8.01@MIT": "Classical Mechanics"
-				}
-			],
-			"external links": [
-				{
-					"title": "official site",
-					"url": "http://ocourse.org"
-				}
-			]
-		},
-		{
-			"event": "TEDxYouthSZHighschool",
-			"title": "Volunteer",
-			"description": "<text>",
-			"timespan": "Aug 2012",
-			"place": "Shenzhen, P.R.China"
+			"company": "Scientific American",
+			"position": "Translator Intern",
+			"website": "http://www.huanqiukexue.com/",
+			"startDate": "2012-08-01",
+			"endDate": "2013-09-01",
+			"overview": "Mainly worked on translating ICT and physics news.",
+			"highlights": {
+				"name": "Contributed to a biology topic named An Overview of Encode Project in Chinese",
+				"url": "http://www.huanqiukexue.com/html/zhuan_ti/2012/1018/22756.html"
+			}
 		}
 	],
-	"programming": [
+	"education": [
 		{
-			"languages": "HTML / CSS / PHP / JavaScript / Python / OCaml / C++",
-			"webtools": "Less etc."
+			"schoolName": "Shenzhen Meilin High School",
+			"location": "Shenzhen, Guangdong, People Republic of China",
+			"startDate": "2010-09-01",
+			"endDate": "2013-07-01"
 		}
 	],
-	"honors": [
+	"publications": [
 		{
-			"title": "...",
-			"from": "..."
+			"name": "避免网络世界的珍珠港事件",
+			"publisher": "Copyright Scientific American Magazine in China",
+			"releaseDate": "2013-01-01",
+			"website": "http://www.duokan.com/book/24932"
+		}
+	],
+	"skills": [
+		{
+			"name": "Web Application",
+			"level": "Experienced",
+			"keywords": [
+				"HTML5", "CSS Layout Engine", "JavaScript", "ES5", "Layout", "Typography", "User Interface"
+			]
 		},
 		{
-			"title": "Black belt of Taekwondo",
-			"from": "Shenzhen Taekwondo Association",
-			"certification": "photo copy <url>"
+			"name": "OS Management",
+			"level": "Experienced",
+			"keywords": [
+				"CentOS", "Linux"
+			]
 		}
 	],
 	"languages": [
 		{
-			"name": "Chinese Mandarin",
+			"name": "Mandarin Chinese",
 			"level": "Native"
 		},
 		{
 			"name": "English",
-			"level": "Fluent"
+			"level": "Professional working proficiency"
 		},
 		{
-			"name": "Russian",
-			"level": "Limited Working Proficiency"
+			"name": "Japanese",
+			"level": "Limited working proficiency"
+		}
+	],
+	"hobbies": [
+		{
+			"name": "Ukulele",
+			"kewords": [
+				"Jake Shimabukuro"
+			]
 		}
 	]
 }
