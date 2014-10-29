@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tommy JINGTAO-LIU</title>
+	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  	<script type="text/javascript" src="https://rawgit.com/peachananr/loading-bar/master/jquery.loadingbar.js"></script>
+	<link href='https://rawgit.com/peachananr/loading-bar/master/loadingbar.css' rel='stylesheet' type='text/css'>-->
+</head>
+<!-- :) -->
+<style>
+@font-face { font-family: 'Archive'; src: url('Archive.otf') format('opentype'); }
+@font-face { font-family: 'Kozuka Gothic Pr6N'; src: url('KozGoPr6N-Regular.otf') format('opentype'); }
+@font-face { font-family: 'MS Gothic'; src: url('MS Gothic.ttf') format('truetype'); }
+@font-face { font-family: 'Uni Sans Book'; src: url('Uni-Sans-Book.otf') format('opentype'); }
+body { padding-right:100px; height:100%; background-color:#000; color:#fff; -webkit-user-select:none; -moz-user-select:none; }
+h1 { font-family:'Archive'; font-size:45px; margin-bottom:-15px; line-height:55px; }
+.h3-ja { font-family:'MS Gothic'; font-size:24px; }
+.h3-date { font-family:'Uni Sans Book'; font-size:22px; padding:200px 0 30px 0; }
+p { font-family:'Kozuka Gothic Pr6N'; font-weight:100; font-size:14px; width:470px; vertical-align: bottom; color:#888; }
+.frame { margin:60px; text-align:left; }
+.images { padding:0 80px 0 60px; }
+</style>
+<!-- :) -->
+<body >
+	<table id="loadingbar-frame" class="frame">
+		<tr>
+		<td>
+		<h1>TOMMY<br>JINGTAO-LIU</h1>
+		<h3 class="h3-ja">リィゥ・ジン・タオ</h3>
+		<h3 class="h3-date">// 2013~2014</h3>
+		<p>CC BY-NC-SA<br>This license lets others remix, tweak, and build upon your work non-commercially, and although their new works must also acknowledge you and be non-commercial, they don’t have to license their derivative works on the same terms.</p>
+		</td>
+		<td class="images"><img id="draggingDisabled" src="works-2013.png">
+		</td>
+		</tr>
+	</table>
+</body>
+<script>
+window.onload = init;
+function init() { disableDraggingFor(document.getElementById("draggingDisabled")); }
+function disableDraggingFor(element) { element.draggable = false; element.onmousedown = function(event) { event.preventDefault(); return false; }; }
+</script>
+<!-- :) -->
+</html>
